@@ -12,11 +12,13 @@ import java.time.LocalDateTime;
 import java.util.Calendar;
 import java.util.ResourceBundle;
 
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 
@@ -78,41 +80,49 @@ public class Controller implements Initializable {
     private Calendar cal;
     private int week = 0;
     private String[] polishMonths = {"styczeń", "luty", "marzec", "kwiecień", "maj", "czerwiec", "lipiec", "sierpień", "wrzesień", "październik", "listopad", "grudzień"};
+
+    private Stage stage1 = new Stage();
+    private Stage stage2 = new Stage();
+    private Stage stage3 = new Stage();
+    private Stage stage4 = new Stage();
+
+
+
     @FXML
     private void addBike() throws IOException {
+        closeOtherWindwos();
         Parent root = FXMLLoader.load(getClass().getResource("addBike.fxml"));
-        Stage stage = new Stage();
-        stage.setTitle("Dodawanie nowego roweru");
-        stage.setScene(new Scene(root, 400, 400));
-        stage.show();
+        stage1.setTitle("Dodawanie nowego roweru");
+        stage1.setScene(new Scene(root, 400, 400));
+        stage1.show();
     }
 
     @FXML
     private void backBike() throws IOException {
+        closeOtherWindwos();
         Parent root = FXMLLoader.load(getClass().getResource("getBackBike.fxml"));
-        Stage stage = new Stage();
-        stage.setTitle("Dodawanie nowego roweru");
-        stage.setScene(new Scene(root, 400, 400));
-        stage.show();
+        stage2.setTitle("Zwrot roweru");
+        stage2.setScene(new Scene(root, 400, 400));
+        stage2.show();
     }
 
     @FXML
     private void  archive() throws IOException {
+        closeOtherWindwos();
         Parent root = FXMLLoader.load(getClass().getResource("archive.fxml"));
-        Stage stage = new Stage();
-        stage.setTitle("Dodawanie nowego roweru");
-        stage.setScene(new Scene(root, 400, 400));
-        stage.show();
+        stage3.setTitle("Archiwum");
+        stage3.setScene(new Scene(root, 400, 400));
+        stage3.show();
     }
 
 
     @FXML
     private void  reservation() throws IOException {
+        closeOtherWindwos();
         Parent root = FXMLLoader.load(getClass().getResource("archive.fxml"));
-        Stage stage = new Stage();
-        stage.setTitle("Dodawanie nowego roweru");
-        stage.setScene(new Scene(root, 400, 400));
-        stage.show();
+        stage4.setTitle("Rezerwacja");
+        stage4.setScene(new Scene(root, 400, 400));
+        stage4.show();
     }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -205,5 +215,11 @@ public class Controller implements Initializable {
         month5.setText(polishMonths[LocalDate.from(DayOfWeek.FRIDAY.adjustInto(LocalDate.now().plusWeeks(week))).getMonthValue() - 1]);
         label6.setText(String.valueOf(LocalDate.from(DayOfWeek.SATURDAY.adjustInto(LocalDate.now().minusWeeks(Math.abs(week)))).getDayOfMonth()));
         month6.setText(polishMonths[LocalDate.from(DayOfWeek.SATURDAY.adjustInto(LocalDate.now().plusWeeks(week))).getMonthValue() - 1]);
+    }
+    private void closeOtherWindwos(){
+        stage1.close();
+        stage2.close();
+        stage3.close();
+        stage4.close();
     }
 }
