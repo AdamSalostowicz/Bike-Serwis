@@ -1,8 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?import javafx.scene.layout.*?>
 
-<GridPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="sample.ControllerAddBike"
-            prefHeight="400.0" prefWidth="400.0">
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane gridLinesVisible="true" prefHeight="400" prefWidth="600" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerAddBike">
+   <columnConstraints>
+      <ColumnConstraints percentWidth="100" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints percentHeight="25" />
+      <RowConstraints percentHeight="25" />
+      <RowConstraints percentHeight="25" />
+      <RowConstraints percentHeight="25" />
+   </rowConstraints>
+   <HBox alignment="CENTER">
+      <Label prefHeight="21.0" prefWidth="149.0" text="Data przyjęcia:" textAlignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <HBox.margin>
+            <Insets />
+         </HBox.margin>
+      </Label>
+      <ChoiceBox prefHeight="26.0" prefWidth="203.0" />
+   </HBox>
+   <HBox alignment="CENTER" GridPane.rowIndex="1">
+      <Label prefHeight="21.0" prefWidth="73.0" text="Rower:" textAlignment="CENTER" GridPane.rowIndex="1">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField prefHeight="26.0" prefWidth="277.0">
+         <HBox.margin>
+            <Insets left="10.0" />
+         </HBox.margin></TextField>
+   </HBox>
+   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
+         <Label alignment="CENTER" contentDisplay="CENTER" text="Nr telefonu:">
+            <font>
+               <Font size="18.0" />
+            </font>
+         </Label>
+      <TextField prefHeight="26.0" prefWidth="243.0">
+         <opaqueInsets>
+            <Insets left="10.0" />
+         </opaqueInsets>
+         <HBox.margin>
+            <Insets left="10.0" />
+         </HBox.margin>
+      </TextField>
+   </HBox>
+   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="3">
+         <Label text="Data wydania:">
+            <font>
+               <Font size="18.0" />
+            </font>
+         </Label>
+      <ChoiceBox prefHeight="26.0" prefWidth="221.0">
+         <HBox.margin>
+            <Insets left="10.0" />
+         </HBox.margin>
+      </ChoiceBox>
+   </HBox>
 </GridPane>

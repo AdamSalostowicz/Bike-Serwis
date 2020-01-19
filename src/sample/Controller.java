@@ -3,7 +3,6 @@ package sample;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-
 import java.io.IOException;
 import java.net.URL;
 import java.time.DayOfWeek;
@@ -11,14 +10,11 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Calendar;
 import java.util.ResourceBundle;
-
-import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
-import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 
@@ -93,7 +89,7 @@ public class Controller implements Initializable {
         closeOtherWindwos();
         Parent root = FXMLLoader.load(getClass().getResource("addBike.fxml"));
         stage1.setTitle("Dodawanie nowego roweru");
-        stage1.setScene(new Scene(root, 400, 400));
+        stage1.setScene(new Scene(root, 600, 400));
         stage1.show();
     }
 
