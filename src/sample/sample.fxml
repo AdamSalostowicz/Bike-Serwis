@@ -1,0 +1,1901 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane gridLinesVisible="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800" prefWidth="1600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" percentWidth="90" />
+        <ColumnConstraints hgrow="SOMETIMES" percentWidth="10" />
+    </columnConstraints>
+    <TabPane layoutX="10.0" layoutY="10.0" prefHeight="1000" prefWidth="Infinity" style="-fx-background-color: transparent" tabClosingPolicy="UNAVAILABLE">
+        <Tab text="Kalendarz">
+            <GridPane gridLinesVisible="true" prefHeight="NaN" prefWidth="Infinity">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="16.6666" />
+                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="16.6666" />
+                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="16.6666" />
+                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="16.6666" />
+                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="16.6666" />
+                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="16.6666" />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints percentHeight="15" />
+                    <RowConstraints percentHeight="85" />
+                </rowConstraints>
+                    <AnchorPane fx:id="anchor1" minHeight="0.0" minWidth="0.0" prefHeight="100" prefWidth="Infinity" GridPane.rowIndex="0">
+                        <Label fx:id="label1" layoutX="100.0" prefHeight="69.0" prefWidth="58.0" textFill="WHITE">
+                            <font>
+                                <Font size="44.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="month1" layoutX="38.0" layoutY="66.0" prefHeight="31.0" prefWidth="95.0" textAlignment="CENTER" textFill="WHITE">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="day1" layoutX="20.0" layoutY="14.0" prefHeight="39.0" prefWidth="62.0" text="Pon" textFill="WHITE" GridPane.halignment="CENTER">
+                            <font>
+                                <Font size="28.0" />
+                            </font>
+                        </Label>
+                    </AnchorPane>
+                    <GridPane gridLinesVisible="true" style="-fx-border-color: whitesmoke" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.00" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints percentHeight="12.5" />
+                            <RowConstraints percentHeight="12.5" />
+                            <RowConstraints percentHeight="12.5" />
+                            <RowConstraints percentHeight="12.5" />
+                            <RowConstraints percentHeight="12.5" />
+                            <RowConstraints percentHeight="12.5" />
+                            <RowConstraints percentHeight="12.5" />
+                            <RowConstraints percentHeight="12.5" />
+                        </rowConstraints>
+                        <GridPane>
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
+                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints vgrow="ALWAYS" />
+                            </rowConstraints>
+                            <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="10" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
+                                <font>
+                                    <Font size="35.0" />
+                                </font>
+                            </Label>
+                            <TabPane styleClass="floating" style="-fx-background-color: transparent" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
+                                <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
+                                    <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                        <font>
+                                            <Font size="15.0" />
+                                        </font>
+                                    </Label>
+                                </Tab>
+                                <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
+                                    <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                        <font>
+                                            <Font size="15.0" />
+                                        </font>
+                                    </Label>
+                                </Tab>
+                                <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
+                                    <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                        <font>
+                                            <Font size="15.0" />
+                                        </font>
+                                    </Label>
+                                </Tab>
+                            </TabPane>
+                        </GridPane>
+                        <GridPane GridPane.rowIndex="1">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
+                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints vgrow="ALWAYS" />
+                            </rowConstraints>
+                            <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="11" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
+                                <font>
+                                    <Font size="35.0" />
+                                </font>
+                            </Label>
+                            <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
+                                <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
+                                    <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                        <font>
+                                            <Font size="15.0" />
+                                        </font>
+                                    </Label>
+                                </Tab>
+                                <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
+                                    <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                        <font>
+                                            <Font size="15.0" />
+                                        </font>
+                                    </Label>
+                                </Tab>
+                                <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
+                                    <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                        <font>
+                                            <Font size="15.0" />
+                                        </font>
+                                    </Label>
+                                </Tab>
+                            </TabPane>
+                        </GridPane>
+                        <GridPane GridPane.rowIndex="2">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
+                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints vgrow="ALWAYS" />
+                            </rowConstraints>
+                            <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="12" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
+                                <font>
+                                    <Font size="35.0" />
+                                </font>
+                            </Label>
+                            <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
+                                <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
+                                    <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                        <font>
+                                            <Font size="15.0" />
+                                        </font>
+                                    </Label>
+                                </Tab>
+                                <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
+                                    <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                        <font>
+                                            <Font size="15.0" />
+                                        </font>
+                                    </Label>
+                                </Tab>
+                                <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
+                                    <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                        <font>
+                                            <Font size="15.0" />
+                                        </font>
+                                    </Label>
+                                </Tab>
+                            </TabPane>
+                        </GridPane>
+                        <GridPane GridPane.rowIndex="3">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
+                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints vgrow="ALWAYS" />
+                            </rowConstraints>
+                            <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="13" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
+                                <font>
+                                    <Font size="35.0" />
+                                </font>
+                            </Label>
+                            <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
+                                <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
+                                    <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                        <font>
+                                            <Font size="15.0" />
+                                        </font>
+                                    </Label>
+                                </Tab>
+                                <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
+                                    <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                        <font>
+                                            <Font size="15.0" />
+                                        </font>
+                                    </Label>
+                                </Tab>
+                                <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
+                                    <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                        <font>
+                                            <Font size="15.0" />
+                                        </font>
+                                    </Label>
+                                </Tab>
+                            </TabPane>
+                        </GridPane>
+                        <GridPane GridPane.rowIndex="4">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
+                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints vgrow="ALWAYS" />
+                            </rowConstraints>
+                            <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="14" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
+                                <font>
+                                    <Font size="35.0" />
+                                </font>
+                            </Label>
+                            <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
+                                <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
+                                    <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                        <font>
+                                            <Font size="15.0" />
+                                        </font>
+                                    </Label>
+                                </Tab>
+                                <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
+                                    <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                        <font>
+                                            <Font size="15.0" />
+                                        </font>
+                                    </Label>
+                                </Tab>
+                                <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
+                                    <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                        <font>
+                                            <Font size="15.0" />
+                                        </font>
+                                    </Label>
+                                </Tab>
+                            </TabPane>
+                        </GridPane>
+                        <GridPane GridPane.rowIndex="5">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
+                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints vgrow="ALWAYS" />
+                            </rowConstraints>
+                            <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="15" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
+                                <font>
+                                    <Font size="35.0" />
+                                </font>
+                            </Label>
+                            <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
+                                <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
+                                    <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                        <font>
+                                            <Font size="15.0" />
+                                        </font>
+                                    </Label>
+                                </Tab>
+                                <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
+                                    <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                        <font>
+                                            <Font size="15.0" />
+                                        </font>
+                                    </Label>
+                                </Tab>
+                                <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
+                                    <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                        <font>
+                                            <Font size="15.0" />
+                                        </font>
+                                    </Label>
+                                </Tab>
+                            </TabPane>
+                        </GridPane>
+                        <GridPane GridPane.rowIndex="6">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
+                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints vgrow="ALWAYS" />
+                            </rowConstraints>
+                            <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="16" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
+                                <font>
+                                    <Font size="35.0" />
+                                </font>
+                            </Label>
+                            <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
+                                <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
+                                    <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                        <font>
+                                            <Font size="15.0" />
+                                        </font>
+                                    </Label>
+                                </Tab>
+                                <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
+                                    <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                        <font>
+                                            <Font size="15.0" />
+                                        </font>
+                                    </Label>
+                                </Tab>
+                                <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
+                                    <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                        <font>
+                                            <Font size="15.0" />
+                                        </font>
+                                    </Label>
+                                </Tab>
+                            </TabPane>
+                        </GridPane>
+                        <GridPane GridPane.rowIndex="7">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
+                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints vgrow="ALWAYS" />
+                            </rowConstraints>
+                            <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="17" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
+                                <font>
+                                    <Font size="35.0" />
+                                </font>
+                            </Label>
+                            <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
+                                <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
+                                    <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                        <font>
+                                            <Font size="15.0" />
+                                        </font>
+                                    </Label>
+                                </Tab>
+                                <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
+                                    <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                        <font>
+                                            <Font size="15.0" />
+                                        </font>
+                                    </Label>
+                                </Tab>
+                                <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
+                                    <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                        <font>
+                                            <Font size="15.0" />
+                                        </font>
+                                    </Label>
+                                </Tab>
+                            </TabPane>
+                        </GridPane>
+                    </GridPane>
+                <SplitPane orientation="VERTICAL" prefHeight="260.0" prefWidth="200.0" style="-fx-background-color: transparent" GridPane.columnIndex="1">
+                    <AnchorPane fx:id="anchor2" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="260.0">
+                        <Label fx:id="label2" layoutX="100.0" prefHeight="69.0" prefWidth="58.0" textFill="WHITE">
+                            <font>
+                                <Font size="44.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="month2" layoutX="38.0" layoutY="66.0" prefHeight="31.0" prefWidth="95.0" textAlignment="CENTER" textFill="WHITE">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="day2" layoutX="20.0" layoutY="14.0" prefHeight="39.0" prefWidth="62.0" text="Wto" textFill="WHITE">
+                            <font>
+                                <Font size="28.0" />
+                            </font>
+                        </Label>
+                    </AnchorPane>
+                </SplitPane>
+                <GridPane gridLinesVisible="true" style="-fx-border-color: whitesmoke" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.00" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints percentHeight="12.5" />
+                        <RowConstraints percentHeight="12.5" />
+                        <RowConstraints percentHeight="12.5" />
+                        <RowConstraints percentHeight="12.5" />
+                        <RowConstraints percentHeight="12.5" />
+                        <RowConstraints percentHeight="12.5" />
+                        <RowConstraints percentHeight="12.5" />
+                        <RowConstraints percentHeight="12.5" />
+                    </rowConstraints>
+                    <GridPane>
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints vgrow="ALWAYS" />
+                        </rowConstraints>
+                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="10" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="35.0" />
+                            </font>
+                        </Label>
+                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
+                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
+                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
+                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                        </TabPane>
+                </GridPane>
+                    <GridPane GridPane.rowIndex="1">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints vgrow="ALWAYS" />
+                        </rowConstraints>
+                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="11" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="35.0" />
+                            </font>
+                        </Label>
+                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
+                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
+                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
+                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                        </TabPane>
+                    </GridPane>
+                    <GridPane GridPane.rowIndex="2">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints vgrow="ALWAYS" />
+                        </rowConstraints>
+                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="12" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="35.0" />
+                            </font>
+                        </Label>
+                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
+                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
+                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
+                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                        </TabPane>
+                    </GridPane>
+                    <GridPane GridPane.rowIndex="3">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints vgrow="ALWAYS" />
+                        </rowConstraints>
+                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="13" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="35.0" />
+                            </font>
+                        </Label>
+                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
+                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
+                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
+                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                        </TabPane>
+                    </GridPane>
+                    <GridPane GridPane.rowIndex="4">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints vgrow="ALWAYS" />
+                        </rowConstraints>
+                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="14" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="35.0" />
+                            </font>
+                        </Label>
+                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
+                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
+                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
+                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                        </TabPane>
+                    </GridPane>
+                    <GridPane GridPane.rowIndex="5">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints vgrow="ALWAYS" />
+                        </rowConstraints>
+                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="15" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="35.0" />
+                            </font>
+                        </Label>
+                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
+                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
+                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
+                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                        </TabPane>
+                    </GridPane>
+                    <GridPane GridPane.rowIndex="6">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints vgrow="ALWAYS" />
+                        </rowConstraints>
+                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="16" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="35.0" />
+                            </font>
+                        </Label>
+                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
+                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
+                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
+                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                        </TabPane>
+                    </GridPane>
+                    <GridPane GridPane.rowIndex="7">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints vgrow="ALWAYS" />
+                        </rowConstraints>
+                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="17" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="35.0" />
+                            </font>
+                        </Label>
+                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
+                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
+                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
+                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                        </TabPane>
+                    </GridPane>
+                </GridPane>
+                <SplitPane orientation="VERTICAL" prefHeight="200.0" prefWidth="260.0" style="-fx-background-color: transparent" GridPane.columnIndex="2">
+                    <AnchorPane fx:id="anchor3" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="260.0">
+                        <Label fx:id="label3" layoutX="100.0" prefHeight="69.0" prefWidth="58.0" textFill="WHITE">
+                            <font>
+                                <Font size="44.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="month3" layoutX="38.0" layoutY="66.0" prefHeight="31.0" prefWidth="95.0" textAlignment="CENTER" textFill="WHITE">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="day3" layoutX="20.0" layoutY="14.0" prefHeight="39.0" prefWidth="62.0" text="Śro" textFill="WHITE">
+                            <font>
+                                <Font size="28.0" />
+                            </font>
+                        </Label>
+                    </AnchorPane>
+                </SplitPane>
+                <GridPane gridLinesVisible="true" style="-fx-border-color: whitesmoke" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.00" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints percentHeight="12.5" />
+                        <RowConstraints percentHeight="12.5" />
+                        <RowConstraints percentHeight="12.5" />
+                        <RowConstraints percentHeight="12.5" />
+                        <RowConstraints percentHeight="12.5" />
+                        <RowConstraints percentHeight="12.5" />
+                        <RowConstraints percentHeight="12.5" />
+                        <RowConstraints percentHeight="12.5" />
+                    </rowConstraints>
+                    <GridPane>
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints vgrow="ALWAYS" />
+                        </rowConstraints>
+                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="10" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="35.0" />
+                            </font>
+                        </Label>
+                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
+                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
+                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
+                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                        </TabPane>
+                    </GridPane>
+                    <GridPane GridPane.rowIndex="1">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints vgrow="ALWAYS" />
+                        </rowConstraints>
+                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="11" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="35.0" />
+                            </font>
+                        </Label>
+                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
+                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
+                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
+                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                        </TabPane>
+                    </GridPane>
+                    <GridPane GridPane.rowIndex="2">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints vgrow="ALWAYS" />
+                        </rowConstraints>
+                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="12" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="35.0" />
+                            </font>
+                        </Label>
+                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
+                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
+                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
+                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                        </TabPane>
+                    </GridPane>
+                    <GridPane GridPane.rowIndex="3">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints vgrow="ALWAYS" />
+                        </rowConstraints>
+                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="13" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="35.0" />
+                            </font>
+                        </Label>
+                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
+                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
+                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
+                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                        </TabPane>
+                    </GridPane>
+                    <GridPane GridPane.rowIndex="4">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints vgrow="ALWAYS" />
+                        </rowConstraints>
+                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="14" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="35.0" />
+                            </font>
+                        </Label>
+                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
+                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
+                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
+                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                        </TabPane>
+                    </GridPane>
+                    <GridPane GridPane.rowIndex="5">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints vgrow="ALWAYS" />
+                        </rowConstraints>
+                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="15" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="35.0" />
+                            </font>
+                        </Label>
+                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
+                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
+                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
+                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                        </TabPane>
+                    </GridPane>
+                    <GridPane GridPane.rowIndex="6">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints vgrow="ALWAYS" />
+                        </rowConstraints>
+                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="16" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="35.0" />
+                            </font>
+                        </Label>
+                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
+                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
+                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
+                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                        </TabPane>
+                    </GridPane>
+                    <GridPane GridPane.rowIndex="7">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints vgrow="ALWAYS" />
+                        </rowConstraints>
+                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="17" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="35.0" />
+                            </font>
+                        </Label>
+                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
+                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
+                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
+                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                        </TabPane>
+                    </GridPane>
+                </GridPane>
+                <SplitPane orientation="VERTICAL" prefHeight="200.0" prefWidth="260.0" style="-fx-background-color: transparent" GridPane.columnIndex="3">
+                    <AnchorPane fx:id="anchor4" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                        <Label fx:id="label4" layoutX="100.0" prefHeight="69.0" prefWidth="58.0" textFill="WHITE">
+                            <font>
+                                <Font size="44.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="month4" layoutX="38.0" layoutY="66.0" prefHeight="31.0" prefWidth="95.0" textAlignment="CENTER" textFill="WHITE">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="day4" layoutX="20.0" layoutY="14.0" prefHeight="39.0" prefWidth="62.0" text="Czw" textFill="WHITE">
+                            <font>
+                                <Font size="28.0" />
+                            </font>
+                        </Label>
+                    </AnchorPane>
+                </SplitPane>
+                <GridPane gridLinesVisible="true" style="-fx-border-color: whitesmoke" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.00" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints percentHeight="12.5" />
+                        <RowConstraints percentHeight="12.5" />
+                        <RowConstraints percentHeight="12.5" />
+                        <RowConstraints percentHeight="12.5" />
+                        <RowConstraints percentHeight="12.5" />
+                        <RowConstraints percentHeight="12.5" />
+                        <RowConstraints percentHeight="12.5" />
+                        <RowConstraints percentHeight="12.5" />
+                    </rowConstraints>
+                    <GridPane>
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints vgrow="ALWAYS" />
+                        </rowConstraints>
+                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="10" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="35.0" />
+                            </font>
+                        </Label>
+                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
+                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
+                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
+                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                        </TabPane>
+                    </GridPane>
+                    <GridPane GridPane.rowIndex="1">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints vgrow="ALWAYS" />
+                        </rowConstraints>
+                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="11" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="35.0" />
+                            </font>
+                        </Label>
+                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
+                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
+                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
+                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                        </TabPane>
+                    </GridPane>
+                    <GridPane GridPane.rowIndex="2">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints vgrow="ALWAYS" />
+                        </rowConstraints>
+                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="12" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="35.0" />
+                            </font>
+                        </Label>
+                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
+                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
+                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
+                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                        </TabPane>
+                    </GridPane>
+                    <GridPane GridPane.rowIndex="3">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints vgrow="ALWAYS" />
+                        </rowConstraints>
+                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="13" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="35.0" />
+                            </font>
+                        </Label>
+                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
+                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
+                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
+                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                        </TabPane>
+                    </GridPane>
+                    <GridPane GridPane.rowIndex="4">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints vgrow="ALWAYS" />
+                        </rowConstraints>
+                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="14" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="35.0" />
+                            </font>
+                        </Label>
+                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
+                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
+                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
+                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                        </TabPane>
+                    </GridPane>
+                    <GridPane GridPane.rowIndex="5">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints vgrow="ALWAYS" />
+                        </rowConstraints>
+                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="15" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="35.0" />
+                            </font>
+                        </Label>
+                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
+                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
+                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
+                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                        </TabPane>
+                    </GridPane>
+                    <GridPane GridPane.rowIndex="6">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints vgrow="ALWAYS" />
+                        </rowConstraints>
+                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="16" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="35.0" />
+                            </font>
+                        </Label>
+                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
+                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
+                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
+                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                        </TabPane>
+                    </GridPane>
+                    <GridPane GridPane.rowIndex="7">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints vgrow="ALWAYS" />
+                        </rowConstraints>
+                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="17" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="35.0" />
+                            </font>
+                        </Label>
+                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
+                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
+                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
+                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                        </TabPane>
+                    </GridPane>
+                </GridPane>
+                <SplitPane orientation="VERTICAL" prefHeight="200.0" prefWidth="260.0" style="-fx-background-color: transparent" GridPane.columnIndex="4">
+                    <AnchorPane fx:id="anchor5" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="260.0">
+                        <Label fx:id="label5" layoutX="100.0" prefHeight="69.0" prefWidth="58.0" textFill="WHITE">
+                            <font>
+                                <Font size="44.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="month5" layoutX="38.0" layoutY="66.0" prefHeight="31.0" prefWidth="95.0" textAlignment="CENTER" textFill="WHITE">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="day5" layoutX="20.0" layoutY="14.0" prefHeight="39.0" prefWidth="62.0" text="Pią" textFill="WHITE">
+                            <font>
+                                <Font size="28.0" />
+                            </font>
+                        </Label>
+                    </AnchorPane>
+                </SplitPane>
+                <GridPane gridLinesVisible="true" style="-fx-border-color: whitesmoke" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.00" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints percentHeight="12.5" />
+                        <RowConstraints percentHeight="12.5" />
+                        <RowConstraints percentHeight="12.5" />
+                        <RowConstraints percentHeight="12.5" />
+                        <RowConstraints percentHeight="12.5" />
+                        <RowConstraints percentHeight="12.5" />
+                        <RowConstraints percentHeight="12.5" />
+                        <RowConstraints percentHeight="12.5" />
+                    </rowConstraints>
+                    <GridPane>
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints vgrow="ALWAYS" />
+                        </rowConstraints>
+                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="10" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="35.0" />
+                            </font>
+                        </Label>
+                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
+                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
+                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
+                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                        </TabPane>
+                    </GridPane>
+                    <GridPane GridPane.rowIndex="1">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints vgrow="ALWAYS" />
+                        </rowConstraints>
+                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="11" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="35.0" />
+                            </font>
+                        </Label>
+                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
+                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
+                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
+                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                        </TabPane>
+                    </GridPane>
+                    <GridPane GridPane.rowIndex="2">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints vgrow="ALWAYS" />
+                        </rowConstraints>
+                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="12" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="35.0" />
+                            </font>
+                        </Label>
+                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
+                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
+                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
+                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                        </TabPane>
+                    </GridPane>
+                    <GridPane GridPane.rowIndex="3">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints vgrow="ALWAYS" />
+                        </rowConstraints>
+                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="13" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="35.0" />
+                            </font>
+                        </Label>
+                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
+                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
+                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
+                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                        </TabPane>
+                    </GridPane>
+                    <GridPane GridPane.rowIndex="4">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints vgrow="ALWAYS" />
+                        </rowConstraints>
+                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="14" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="35.0" />
+                            </font>
+                        </Label>
+                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
+                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
+                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
+                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                        </TabPane>
+                    </GridPane>
+                    <GridPane GridPane.rowIndex="5">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints vgrow="ALWAYS" />
+                        </rowConstraints>
+                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="15" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="35.0" />
+                            </font>
+                        </Label>
+                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
+                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
+                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
+                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                        </TabPane>
+                    </GridPane>
+                    <GridPane GridPane.rowIndex="6">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints vgrow="ALWAYS" />
+                        </rowConstraints>
+                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="16" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="35.0" />
+                            </font>
+                        </Label>
+                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
+                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
+                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
+                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                        </TabPane>
+                    </GridPane>
+                    <GridPane GridPane.rowIndex="7">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints vgrow="ALWAYS" />
+                        </rowConstraints>
+                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="17" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="35.0" />
+                            </font>
+                        </Label>
+                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
+                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
+                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
+                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                        </TabPane>
+                    </GridPane>
+                </GridPane>
+                <SplitPane orientation="VERTICAL" prefHeight="200.0" prefWidth="260.0" style="-fx-background-color: transparent" GridPane.columnIndex="5">
+                    <AnchorPane fx:id="anchor6" minHeight="0.0" minWidth="0.0" prefHeight="285.0" prefWidth="193.0">
+                        <Label fx:id="label6" layoutX="100.0" prefHeight="69.0" prefWidth="58.0" textFill="WHITE">
+                            <font>
+                                <Font size="44.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="month6" layoutX="38.0" layoutY="66.0" prefHeight="31.0" prefWidth="95.0" textAlignment="CENTER" textFill="WHITE">
+                            <font>
+                                <Font size="19.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="day6" layoutX="20.0" layoutY="14.0" prefHeight="39.0" prefWidth="62.0" text="Sob" textFill="WHITE">
+                            <font>
+                                <Font size="28.0" />
+                            </font>
+                        </Label>
+                    </AnchorPane>
+                </SplitPane>
+                <GridPane gridLinesVisible="true" style="-fx-border-color: whitesmoke" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.00" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints percentHeight="12.5" />
+                        <RowConstraints percentHeight="12.5" />
+                        <RowConstraints percentHeight="12.5" />
+                        <RowConstraints percentHeight="12.5" />
+                    </rowConstraints>
+                    <GridPane>
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints vgrow="ALWAYS" />
+                        </rowConstraints>
+                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="10" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="35.0" />
+                            </font>
+                        </Label>
+                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
+                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
+                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
+                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                        </TabPane>
+                    </GridPane>
+                    <GridPane GridPane.rowIndex="1">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints vgrow="ALWAYS" />
+                        </rowConstraints>
+                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="11" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="35.0" />
+                            </font>
+                        </Label>
+                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
+                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
+                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
+                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                        </TabPane>
+                    </GridPane>
+                    <GridPane GridPane.rowIndex="2">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints vgrow="ALWAYS" />
+                        </rowConstraints>
+                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="12" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="35.0" />
+                            </font>
+                        </Label>
+                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
+                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
+                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
+                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                        </TabPane>
+                    </GridPane>
+                    <GridPane GridPane.rowIndex="3">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints vgrow="ALWAYS" />
+                        </rowConstraints>
+                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="13" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="35.0" />
+                            </font>
+                        </Label>
+                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
+                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
+                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
+                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </Tab>
+                        </TabPane>
+                    </GridPane>
+                </GridPane>
+            </GridPane>
+        </Tab>
+        <Tab text="Wolne terminy">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+        </Tab>
+        <Tab text="Rowery na stanie">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+        </Tab>
+    </TabPane>
+    <VBox alignment="TOP_CENTER" prefHeight="595.0" prefWidth="250.0" spacing="30.0" GridPane.columnIndex="1">
+        <padding>
+            <Insets bottom="50.0" top="50.0" />
+        </padding>
+        <Label fx:id="nextWeek" onMouseClicked="#showNextWeekEvent" prefHeight="46.0" prefWidth="96.0" text="&gt;&gt;" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <font>
+                <Font size="46.0" />
+            </font>
+        </Label>
+        <Label fx:id="backWeek" contentDisplay="RIGHT" onMouseClicked="#showBackWeekEvent" prefHeight="46.0" prefWidth="96.0" text="&lt;&lt;" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <font>
+                <Font size="46.0" />
+            </font>
+        </Label>
+        <Button onAction="#addBike" maxWidth="120.0" minWidth="100" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="Dodaj rower" textFill="WHITE">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <Button onAction="#backBike" maxWidth="120.0" minWidth="100" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="Zwróć rower" textFill="WHITE">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <Button onAction="#archive" maxWidth="120.0" minWidth="100" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-border-color: whitesmoke; " text="Archiwum" textFill="#fcfafa">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <Button onAction="#reservation" maxWidth="120.0" minWidth="100" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="Rezerwacja" textFill="WHITE">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+    </VBox>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
