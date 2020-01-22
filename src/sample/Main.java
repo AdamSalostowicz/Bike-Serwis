@@ -1,19 +1,44 @@
 package sample;
 
-
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
-
 import java.io.FileInputStream;
 import java.awt.*;
+import java.io.IOException;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Properties;
+import java.sql.Connection;
 
 public class Main extends Application {
     public double width;
     public double height;
+    private static FileInputStream in;
+    Connection conn = null;
+
+    @Override
+    public void init() throws IOException {
+        Properties prop;
+        prop = new Properties();
+        in = new FileInputStream("src/sample/conf.properties");
+        prop.load(in);
+        try {
+            DriverManager.registerDriver(new org.postgresql.Driver());
+            System.out.println(prop.getProperty("user"));
+            conn = DriverManager.getConnection(prop.getProperty("url"), prop.getProperty("user"), prop.getProperty("password"));
+            Statement stmt = (Statement) conn.createStatement();
+            System.out.println("Connected to the Postgresql server successfully.");
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+
     @Override
     public void start(Stage primaryStage) throws Exception{
         Region root = FXMLLoader.load(getClass().getResource("sample.fxml"));
@@ -34,4 +59,10 @@ public class Main extends Application {
     public static void main(String[] args) {
         launch(args);
     }
+
+    @Override
+    public void stop() throws SQLException {
+        conn.close();
+    }
+
 }
