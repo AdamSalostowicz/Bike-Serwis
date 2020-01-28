@@ -11,7 +11,6 @@ import java.awt.*;
 import java.io.IOException;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.Properties;
 import java.sql.Connection;
 
@@ -19,7 +18,7 @@ public class Main extends Application {
     public double width;
     public double height;
     private static FileInputStream in;
-    Connection conn = null;
+    static Connection conn = null;
 
     @Override
     public void init() throws IOException {
@@ -31,7 +30,6 @@ public class Main extends Application {
             DriverManager.registerDriver(new org.postgresql.Driver());
             System.out.println(prop.getProperty("user"));
             conn = DriverManager.getConnection(prop.getProperty("url"), prop.getProperty("user"), prop.getProperty("password"));
-            Statement stmt = (Statement) conn.createStatement();
             System.out.println("Connected to the Postgresql server successfully.");
         } catch (SQLException e) {
             System.out.println(e.getMessage());

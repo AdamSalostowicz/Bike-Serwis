@@ -89,7 +89,7 @@ public class Controller implements Initializable {
         closeOtherWindwos();
         Parent root = FXMLLoader.load(getClass().getResource("addBike.fxml"));
         stage1.setTitle("Dodawanie nowego roweru");
-        stage1.setScene(new Scene(root, 600, 400));
+        stage1.setScene(new Scene(root, 1200, 400));
         stage1.show();
     }
 
