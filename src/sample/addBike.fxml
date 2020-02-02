@@ -108,7 +108,7 @@
                   <Insets />
                </VBox.margin>
             </ChoiceBox>
-         <Button mnemonicParsing="false" text="Dodaj">
+         <Button onAction="#addRow" mnemonicParsing="false" text="Dodaj">
             <font>
                <Font size="16.0" />
             </font>
@@ -118,7 +118,7 @@
          </Button>
       </VBox>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
-            <TableView prefHeight="155.0" prefWidth="480.0">
+            <TableView fx:id="tableview" prefHeight="155.0" prefWidth="480.0">
               <columns>
                 <TableColumn fx:id="column1" prefWidth="539.0" style="-fx-font-scale: 18" text="Nazwa" />
                 <TableColumn fx:id="column2" minWidth="0.0" prefWidth="58.0" style="-fx-font-scale: 18" text="Cena" />
