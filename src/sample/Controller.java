@@ -44,32 +44,6 @@ public class Controller implements Initializable {
     private Label month5;
     @FXML
     private Label month6;
-    @FXML
-    private Label day1;
-    @FXML
-    private Label day2;
-    @FXML
-    private Label day3;
-    @FXML
-    private Label day4;
-    @FXML
-    private Label day5;
-    @FXML
-    private Label day6;
-    @FXML
-    private AnchorPane anchor1;
-    @FXML
-    private AnchorPane anchor2;
-    @FXML
-    private AnchorPane anchor3;
-    @FXML
-    private AnchorPane anchor4;
-    @FXML
-    private AnchorPane anchor5;
-    @FXML
-    private AnchorPane anchor6;
-    @FXML
-    private Button ButtonAddBike;
 
     private LocalDateTime now;
     private DayOfWeek currentDayofWeek;

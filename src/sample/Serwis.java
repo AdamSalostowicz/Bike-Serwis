@@ -7,23 +7,20 @@ public class Serwis {
     private final SimpleStringProperty name;
     private final SimpleDoubleProperty price;
 
-    public Serwis(String tName, Double tPrice){
-        this.name = new SimpleStringProperty(tName);
-        this.price = new SimpleDoubleProperty(tPrice);
+    public Serwis(String fName, Double fPrice){
+        this.name = new SimpleStringProperty(fName);
+        this.price = new SimpleDoubleProperty(fPrice);
     }
-    public String getName() {
+    public String getName(){
         return name.get();
     }
-
-    public void setName(String tName) {
-        name.set(tName);
+    public void setName(String fName){
+        name.set(fName);
     }
-
-    public double getPrice() {
+    public Double getPrice(){
         return price.get();
     }
-
-    public void setPrice(double tPrice) {
-        price.set(tPrice);
+    public void setPrice(Double fPrice){
+        price.set(fPrice);
     }
 }

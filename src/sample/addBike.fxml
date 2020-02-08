@@ -81,9 +81,9 @@
                <Insets left="10.0" />
             </HBox.margin>
          </Label>
-         <TextArea prefHeight="100.0" prefWidth="514.0">
+         <TextArea prefHeight="90.0" prefWidth="510.0">
          <HBox.margin>
-            <Insets left="10.0" />
+            <Insets left="10.0" right="10.0" top="10.0" />
          </HBox.margin></TextArea>
    </HBox>
    <GridPane prefHeight="297.0" prefWidth="480.0" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.rowSpan="3">
@@ -108,7 +108,7 @@
                   <Insets />
                </VBox.margin>
             </ChoiceBox>
-         <Button onAction="#addRow" mnemonicParsing="false" text="Dodaj">
+         <Button mnemonicParsing="false" onAction="#addRow" text="Dodaj">
             <font>
                <Font size="16.0" />
             </font>
@@ -118,7 +118,7 @@
          </Button>
       </VBox>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
-            <TableView fx:id="tableview" prefHeight="155.0" prefWidth="480.0">
+            <TableView fx:id="tableView" prefHeight="155.0" prefWidth="480.0">
               <columns>
                 <TableColumn fx:id="column1" prefWidth="539.0" style="-fx-font-scale: 18" text="Nazwa" />
                 <TableColumn fx:id="column2" minWidth="0.0" prefWidth="58.0" style="-fx-font-scale: 18" text="Cena" />

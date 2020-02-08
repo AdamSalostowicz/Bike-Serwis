@@ -8,36 +8,26 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-
 import java.net.URL;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.ResourceBundle;
 import static sample.Main.conn;
 
 public class ControllerAddBike implements Initializable {
 
-    @FXML
-    public TableView<Serwis> tableView;
-    @FXML
-    public ChoiceBox choicebox;
-    @FXML
-    public TableColumn column1;
-    @FXML
-    public TableColumn column2;
+    @FXML public TableView<Serwis> tableView;
+    @FXML public ChoiceBox choicebox;
+    @FXML public TableColumn<Serwis, String> column1;
+    @FXML public TableColumn<Serwis, Double> column2;
 
     public Object service = null;
+    ObservableList<Serwis> observableList = FXCollections.observableArrayList();;
 
-    ObservableList<Serwis> observableList;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        observableList = FXCollections.observableArrayList();
-        List<Object> serviceItems = new ArrayList<>();
-        List<String> listService = new ArrayList<>();
         Statement stmt1 = null;
         ResultSet resultSet = null;
         int i =0;
@@ -50,14 +40,9 @@ public class ControllerAddBike implements Initializable {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-//        try {
-//            conn.close();
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
     }
     @FXML
-    private void addRow() throws SQLException, NullPointerException {
+    private void addRow() throws SQLException {
         if (choicebox.getValue() != null) {
             service = choicebox.getValue();
             String serviceBis = String.valueOf(service);
@@ -71,20 +56,13 @@ public class ControllerAddBike implements Initializable {
             preparedStatement.setInt(1, Integer.parseInt(row));
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
-                System.out.println(resultSet.getString(1) + " " + resultSet.getString(2));
-                observableList.add(new Serwis(resultSet.getString(1), Double.valueOf(resultSet.getString(2))));
-                System.out.println(String.valueOf(observableList));
+                observableList.add(new Serwis(resultSet.getString(1), resultSet.getDouble(2)));
             }
-            column1.setCellFactory(
-                    new PropertyValueFactory<Serwis, String>("name")
-            );
-            column2.setCellFactory(
-                    new PropertyValueFactory<Serwis, Double>("price")
-            );
-            System.out.println(observableList.get(0).getName());
-            System.out.println(observableList.get(0).getPrice());
+            column1.setCellValueFactory(
+                    new PropertyValueFactory<Serwis, String>("name"));
+            column2.setCellValueFactory(
+                    new PropertyValueFactory<Serwis, Double>("price"));
             tableView.setItems(observableList);
-            tableView.getColumns().addAll(column1, column2);
         }
     }
 }
