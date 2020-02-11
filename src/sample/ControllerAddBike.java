@@ -2,6 +2,7 @@ package sample;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ChoiceBox;
@@ -13,6 +14,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Collection;
 import java.util.ResourceBundle;
 import static sample.Main.conn;
 
@@ -24,10 +26,17 @@ public class ControllerAddBike implements Initializable {
     @FXML public TableColumn<Serwis, Double> column2;
 
     public Object service = null;
+    public double sum = 0;
     ObservableList<Serwis> observableList = FXCollections.observableArrayList();;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        observableList.add(new Serwis("Suma", sum));
+        column1.setCellValueFactory(
+                new PropertyValueFactory<Serwis, String>("name"));
+        column2.setCellValueFactory(
+                new PropertyValueFactory<Serwis, Double>("price"));
+        tableView.setItems(observableList);
         Statement stmt1 = null;
         ResultSet resultSet = null;
         int i =0;
@@ -43,6 +52,8 @@ public class ControllerAddBike implements Initializable {
     }
     @FXML
     private void addRow() throws SQLException {
+        observableList.remove(tableView.getItems().size() - 1);
+        System.out.println(tableView.getItems().size());
         if (choicebox.getValue() != null) {
             service = choicebox.getValue();
             String serviceBis = String.valueOf(service);
@@ -57,12 +68,20 @@ public class ControllerAddBike implements Initializable {
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
                 observableList.add(new Serwis(resultSet.getString(1), resultSet.getDouble(2)));
+                sum += resultSet.getDouble(2);
             }
-            column1.setCellValueFactory(
-                    new PropertyValueFactory<Serwis, String>("name"));
-            column2.setCellValueFactory(
-                    new PropertyValueFactory<Serwis, Double>("price"));
+            observableList.add(new Serwis("Suma", sum));
             tableView.setItems(observableList);
         }
+    }
+    @FXML
+    public void deleteRow(ActionEvent actionEvent) {
+        if (tableView.getSelectionModel().getFocusedIndex() != tableView.getItems().size() - 1){
+            observableList.remove(tableView.getSelectionModel().getFocusedIndex());
+        }
+    }
+    @FXML
+    public void addBike(ActionEvent actionEvent) {
+        new mainService();
     }
 }
