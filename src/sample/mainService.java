@@ -33,13 +33,13 @@ public class mainService {
 //        setCustomerLastName(lastName.getText());
 //        setCustomerPhoneNumber(phoneNumber.getText());
 //        setDateReleased(datePicker.getValue());
-        System.out.println(LocalDateTime.now().toLocalDate()+ " " +
-                        bikeName.getText() + " " +
-                description.getText() + " " +
-                firstName.getText() + " " +
-                lastName.getText() + " " +
-                phoneNumber.getText() + " " +
-                datePicker.getValue());
+//        System.out.println(LocalDateTime.now()+ " " +
+//                bikeName.getText() + " " +
+//                description.getText() + " " +
+//                firstName.getText() + " " +
+//                lastName.getText() + " " +
+//                phoneNumber.getText() + " " +
+//                datePicker.getValue());
     }
 
     public String getBikeModel() { return bikeModel;}

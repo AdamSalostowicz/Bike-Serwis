@@ -1,5 +1,6 @@
 package sample;
 
+import javafx.beans.Observable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -52,9 +53,8 @@ public class ControllerAddBike implements Initializable {
     }
     @FXML
     private void addRow() throws SQLException {
-        observableList.remove(tableView.getItems().size() - 1);
-        System.out.println(tableView.getItems().size());
         if (choicebox.getValue() != null) {
+            observableList.remove(tableView.getItems().size() - 1);
             service = choicebox.getValue();
             String serviceBis = String.valueOf(service);
             String row = "";
@@ -76,12 +76,15 @@ public class ControllerAddBike implements Initializable {
     }
     @FXML
     public void deleteRow(ActionEvent actionEvent) {
-        if (tableView.getSelectionModel().getFocusedIndex() != tableView.getItems().size() - 1){
+        if ((tableView.getSelectionModel().getFocusedIndex() != tableView.getItems().size() - 1)){
+            sum -= tableView.getSelectionModel().getSelectedItem().getPrice();
+            observableList.remove(tableView.getItems().size() - 1);
+            observableList.add(new Serwis("Suma", sum));
             observableList.remove(tableView.getSelectionModel().getFocusedIndex());
         }
     }
     @FXML
     public void addBike(ActionEvent actionEvent) {
-        new mainService();
+//        new mainService();
     }
 }
