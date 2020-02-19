@@ -11,6 +11,8 @@ import java.awt.*;
 import java.io.IOException;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Properties;
 import java.sql.Connection;
 
@@ -34,6 +36,7 @@ public class Main extends Application {
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
+        System.out.println(LocalDate.now());
     }
 
 

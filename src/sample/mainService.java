@@ -2,11 +2,10 @@ package sample;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.TableView;
 
-import javax.swing.text.TableView;
 import java.awt.*;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 public class mainService {
     public String bikeModel;
@@ -22,11 +21,11 @@ public class mainService {
     @FXML private DatePicker datePicker;
     @FXML private TextField firstName;
     @FXML private TextField lastName;
-    @FXML private TextField bikeName;
+    @FXML public TextField bikeName;
     @FXML private TextField phoneNumber;
 
-    mainService(){
-//        dateAcceptance = LocalDateTime.now().toLocalDate();
+    mainService() {
+//        dateAcceptance = LocalDate.now();
 //        setBikeModel(bikeName.getText());
 //        setBikeDescription(description.getText());
 //        setCustomerName(firstName.getText());
@@ -40,6 +39,8 @@ public class mainService {
 //                lastName.getText() + " " +
 //                phoneNumber.getText() + " " +
 //                datePicker.getValue());
+//        firstName.getText();
+//        System.out.println(bikeName.getText());
     }
 
     public String getBikeModel() { return bikeModel;}
@@ -68,7 +69,6 @@ public class mainService {
 
     public void setBikeModel(String bikeModel) {
         this.bikeModel = bikeModel;
-
     }
 
     public void setBikeDescription(String bikeDescription) {
