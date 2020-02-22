@@ -1,6 +1,5 @@
 package sample;
 
-import javafx.beans.Observable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -9,12 +8,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
-
-
-import javax.print.DocFlavor;
 import java.net.URL;
 import java.sql.*;
 import java.time.LocalDate;
+import java.util.Arrays;
 import java.util.ResourceBundle;
 import static sample.Main.conn;
 
@@ -54,15 +51,7 @@ public class ControllerAddBike implements Initializable {
         tableView.setItems(observableList);
         stmt1 = null;
         int i =0;
-        try {
-            stmt1 = conn.createStatement();
-            resultSet = stmt1.executeQuery("SELECT * FROM service");
-            while (resultSet.next()){
-                choicebox.getItems().add(resultSet.getString(1) + " " + resultSet.getString(2) + " - " + resultSet.getString(3) + " PLN");
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+        setChoicebox();
     }
     @FXML
     private void addRow() throws SQLException {
@@ -98,8 +87,8 @@ public class ControllerAddBike implements Initializable {
     }
     @FXML
     public void addBike(ActionEvent actionEvent) throws SQLException {
-        if (bikeName.getText() != null & firstName.getText() != null & lastName.getText() != null & phoneNumber.getText() != null & datePicker.getValue() != null) {
-            int key1 = 0, key2 = 0, key3 = 0;
+        if (bikeName.getText().isEmpty() == false & firstName.getText().isEmpty() == false & lastName.getText().isEmpty() == false & phoneNumber.getText().isEmpty() == false & datePicker.getValue() != null & observableList.size() > 1) {
+            int key1 = 0, key2 = 0, key3 = 0, key4 = 0;
             PreparedStatement preparedStatement = conn.prepareStatement("INSERT INTO bike VALUES (default , ?, ?)");
             preparedStatement.setString(1, bikeName.getText());
             preparedStatement.setString(2, description.getText());
@@ -125,14 +114,64 @@ public class ControllerAddBike implements Initializable {
             while (resultSet.next()) {
                 key3 = resultSet.getInt(1);
             }
-            preparedStatement = conn.prepareStatement("INSERT INTO main VALUES (?, ?, ?)");
+            preparedStatement = conn.prepareStatement("INSERT INTO orders VALUES (default, ?)");
+            preparedStatement.setString(1, setOrderDetails());
+            preparedStatement.execute();
+            resultSet = stmt1.executeQuery("SELECT max(orders_id) from orders");
+            while (resultSet.next()){
+                key4 = resultSet.getInt(1);
+            }
+            preparedStatement = conn.prepareStatement("INSERT INTO main VALUES (?, ?, ?, ?)");
             preparedStatement.setInt(1, key2);
             preparedStatement.setInt(2, key1);
             preparedStatement.setInt(3, key3);
+            preparedStatement.setInt(4, key4);
             preparedStatement.execute();
             System.out.println("Dodano");
+            clearAllControllers();
         }else{
             System.out.println("NIe dodano");
+        }
+    }
+    public String setOrderDetails() throws SQLException {
+        char[] serviceList = new char[74];
+        StringBuilder stringBuilder = new StringBuilder();
+        Arrays.fill(serviceList, '0');
+        for (int i = 0; i < observableList.size() - 1; i++) {
+            PreparedStatement preparedStatement = conn.prepareStatement("SELECT service_id FROM service where service_name = ?");
+            preparedStatement.setString(1,observableList.get(i).getName());
+            preparedStatement.execute();
+            resultSet = preparedStatement.getResultSet();
+            while(resultSet.next()){
+                serviceList[resultSet.getInt(1) - 1] = '1';
+            }
+        }
+        for (int i = 0; i < serviceList.length; i++) {
+            stringBuilder.append(serviceList[i]);
+        }
+        return stringBuilder.toString();
+    }
+    public void clearAllControllers(){
+        observableList.clear();
+        sum = 0;
+        observableList.add(new Serwis("Suma", sum));
+        description.clear();
+        firstName.clear();
+        lastName.clear();
+        bikeName.clear();
+        phoneNumber.clear();
+        datePicker.getEditor().clear();
+    }
+
+    public void setChoicebox() {
+        try {
+            stmt1 = conn.createStatement();
+            resultSet = stmt1.executeQuery("SELECT * FROM service");
+            while (resultSet.next()){
+                choicebox.getItems().add(resultSet.getString(1) + " " + resultSet.getString(2) + " - " + resultSet.getString(3) + " PLN");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 }
