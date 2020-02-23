@@ -69,8 +69,8 @@
                                     <Font size="35.0" />
                                 </font>
                             </Label>
-                            <TabPane styleClass="floating" style="-fx-background-color: transparent" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
-                                <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
+                            <TabPane stylesheets="@tabPane.css" style="-fx-background-color: transparent" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
+                                <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red;" text="rower1">
                                     <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
                                         <font>
                                             <Font size="15.0" />
@@ -1874,22 +1874,22 @@
                 <Font size="46.0" />
             </font>
         </Label>
-        <Button onAction="#addBike" maxWidth="120.0" minWidth="100" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="Dodaj rower" textFill="WHITE">
+        <Button maxWidth="120.0" minWidth="100" mnemonicParsing="false" onAction="#addBike" style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="Dodaj rower" textFill="WHITE">
             <font>
                 <Font size="15.0" />
             </font>
         </Button>
-        <Button onAction="#backBike" maxWidth="120.0" minWidth="100" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="Zwróć rower" textFill="WHITE">
+        <Button maxWidth="120.0" minWidth="100" mnemonicParsing="false" onAction="#backBike" style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="Zwróć rower" textFill="WHITE">
             <font>
                 <Font size="15.0" />
             </font>
         </Button>
-        <Button onAction="#archive" maxWidth="120.0" minWidth="100" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-border-color: whitesmoke; " text="Archiwum" textFill="#fcfafa">
+        <Button maxWidth="120.0" minWidth="100" mnemonicParsing="false" onAction="#archive" style="-fx-background-color: transparent; -fx-border-color: whitesmoke; " text="Archiwum" textFill="#fcfafa">
             <font>
                 <Font size="15.0" />
             </font>
         </Button>
-        <Button onAction="#reservation" maxWidth="120.0" minWidth="100" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="Rezerwacja" textFill="WHITE">
+        <Button maxWidth="120.0" minWidth="100" mnemonicParsing="false" onAction="#reservation" style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="Rezerwacja" textFill="WHITE">
             <font>
                 <Font size="15.0" />
             </font>
