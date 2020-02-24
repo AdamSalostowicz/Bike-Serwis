@@ -21,7 +21,7 @@ public class Main extends Application {
     public double height;
     private static FileInputStream in;
     static Connection conn = null;
-
+    static int number = 1;
     @Override
     public void init() throws IOException {
         Properties prop;

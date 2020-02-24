@@ -15,6 +15,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 
@@ -44,6 +45,8 @@ public class Controller implements Initializable {
     private Label month5;
     @FXML
     private Label month6;
+    @FXML
+    static GridPane gridPane;
 
     private LocalDateTime now;
     private DayOfWeek currentDayofWeek;

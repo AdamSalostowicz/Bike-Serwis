@@ -10,7 +10,7 @@
         <ColumnConstraints hgrow="SOMETIMES" percentWidth="90" />
         <ColumnConstraints hgrow="SOMETIMES" percentWidth="10" />
     </columnConstraints>
-    <TabPane layoutX="10.0" layoutY="10.0" prefHeight="1000" prefWidth="Infinity" style="-fx-background-color: transparent" tabClosingPolicy="UNAVAILABLE">
+    <TabPane layoutX="10.0" layoutY="10.0" prefHeight="1000" prefWidth="Infinity" style="-fx-background-color: transparent" tabClosingPolicy="UNAVAILABLE" stylesheets="@mainTabPane.css">
         <Tab text="Kalendarz">
             <GridPane gridLinesVisible="true" prefHeight="NaN" prefWidth="Infinity">
                 <columnConstraints>
@@ -42,7 +42,7 @@
                             </font>
                         </Label>
                     </AnchorPane>
-                    <GridPane gridLinesVisible="true" style="-fx-border-color: whitesmoke" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                    <GridPane fx:id="gridPaneFromSample" gridLinesVisible="true" style="-fx-border-color: whitesmoke" GridPane.columnIndex="0" GridPane.rowIndex="1">
                         <columnConstraints>
                             <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.00" />
                         </columnConstraints>
@@ -56,301 +56,29 @@
                             <RowConstraints percentHeight="12.5" />
                             <RowConstraints percentHeight="12.5" />
                         </rowConstraints>
-                        <GridPane>
-                            <columnConstraints>
-                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
-                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
-                            </columnConstraints>
-                            <rowConstraints>
-                                <RowConstraints vgrow="ALWAYS" />
-                            </rowConstraints>
-                            <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="10" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
-                                <font>
-                                    <Font size="35.0" />
-                                </font>
-                            </Label>
-                            <TabPane stylesheets="@tabPane.css" style="-fx-background-color: transparent" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
-                                <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red;" text="rower1">
-                                    <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                        <font>
-                                            <Font size="15.0" />
-                                        </font>
-                                    </Label>
-                                </Tab>
-                                <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
-                                    <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                        <font>
-                                            <Font size="15.0" />
-                                        </font>
-                                    </Label>
-                                </Tab>
-                                <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
-                                    <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                        <font>
-                                            <Font size="15.0" />
-                                        </font>
-                                    </Label>
-                                </Tab>
-                            </TabPane>
+                        <GridPane fx:id="gridPane">
+                            <fx:include source="calendarCell.fxml"/>
                         </GridPane>
                         <GridPane GridPane.rowIndex="1">
-                            <columnConstraints>
-                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
-                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
-                            </columnConstraints>
-                            <rowConstraints>
-                                <RowConstraints vgrow="ALWAYS" />
-                            </rowConstraints>
-                            <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="11" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
-                                <font>
-                                    <Font size="35.0" />
-                                </font>
-                            </Label>
-                            <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
-                                <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
-                                    <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                        <font>
-                                            <Font size="15.0" />
-                                        </font>
-                                    </Label>
-                                </Tab>
-                                <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
-                                    <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                        <font>
-                                            <Font size="15.0" />
-                                        </font>
-                                    </Label>
-                                </Tab>
-                                <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
-                                    <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                        <font>
-                                            <Font size="15.0" />
-                                        </font>
-                                    </Label>
-                                </Tab>
-                            </TabPane>
+                            <fx:include source="calendarCell.fxml"/>
                         </GridPane>
                         <GridPane GridPane.rowIndex="2">
-                            <columnConstraints>
-                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
-                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
-                            </columnConstraints>
-                            <rowConstraints>
-                                <RowConstraints vgrow="ALWAYS" />
-                            </rowConstraints>
-                            <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="12" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
-                                <font>
-                                    <Font size="35.0" />
-                                </font>
-                            </Label>
-                            <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
-                                <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
-                                    <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                        <font>
-                                            <Font size="15.0" />
-                                        </font>
-                                    </Label>
-                                </Tab>
-                                <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
-                                    <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                        <font>
-                                            <Font size="15.0" />
-                                        </font>
-                                    </Label>
-                                </Tab>
-                                <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
-                                    <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                        <font>
-                                            <Font size="15.0" />
-                                        </font>
-                                    </Label>
-                                </Tab>
-                            </TabPane>
+                            <fx:include source="calendarCell.fxml"/>
                         </GridPane>
                         <GridPane GridPane.rowIndex="3">
-                            <columnConstraints>
-                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
-                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
-                            </columnConstraints>
-                            <rowConstraints>
-                                <RowConstraints vgrow="ALWAYS" />
-                            </rowConstraints>
-                            <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="13" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
-                                <font>
-                                    <Font size="35.0" />
-                                </font>
-                            </Label>
-                            <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
-                                <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
-                                    <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                        <font>
-                                            <Font size="15.0" />
-                                        </font>
-                                    </Label>
-                                </Tab>
-                                <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
-                                    <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                        <font>
-                                            <Font size="15.0" />
-                                        </font>
-                                    </Label>
-                                </Tab>
-                                <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
-                                    <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                        <font>
-                                            <Font size="15.0" />
-                                        </font>
-                                    </Label>
-                                </Tab>
-                            </TabPane>
+                            <fx:include source="calendarCell.fxml"/>
                         </GridPane>
                         <GridPane GridPane.rowIndex="4">
-                            <columnConstraints>
-                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
-                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
-                            </columnConstraints>
-                            <rowConstraints>
-                                <RowConstraints vgrow="ALWAYS" />
-                            </rowConstraints>
-                            <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="14" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
-                                <font>
-                                    <Font size="35.0" />
-                                </font>
-                            </Label>
-                            <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
-                                <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
-                                    <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                        <font>
-                                            <Font size="15.0" />
-                                        </font>
-                                    </Label>
-                                </Tab>
-                                <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
-                                    <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                        <font>
-                                            <Font size="15.0" />
-                                        </font>
-                                    </Label>
-                                </Tab>
-                                <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
-                                    <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                        <font>
-                                            <Font size="15.0" />
-                                        </font>
-                                    </Label>
-                                </Tab>
-                            </TabPane>
+                            <fx:include source="calendarCell.fxml"/>
                         </GridPane>
                         <GridPane GridPane.rowIndex="5">
-                            <columnConstraints>
-                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
-                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
-                            </columnConstraints>
-                            <rowConstraints>
-                                <RowConstraints vgrow="ALWAYS" />
-                            </rowConstraints>
-                            <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="15" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
-                                <font>
-                                    <Font size="35.0" />
-                                </font>
-                            </Label>
-                            <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
-                                <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
-                                    <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                        <font>
-                                            <Font size="15.0" />
-                                        </font>
-                                    </Label>
-                                </Tab>
-                                <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
-                                    <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                        <font>
-                                            <Font size="15.0" />
-                                        </font>
-                                    </Label>
-                                </Tab>
-                                <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
-                                    <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                        <font>
-                                            <Font size="15.0" />
-                                        </font>
-                                    </Label>
-                                </Tab>
-                            </TabPane>
+                            <fx:include source="calendarCell.fxml"/>
                         </GridPane>
                         <GridPane GridPane.rowIndex="6">
-                            <columnConstraints>
-                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
-                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
-                            </columnConstraints>
-                            <rowConstraints>
-                                <RowConstraints vgrow="ALWAYS" />
-                            </rowConstraints>
-                            <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="16" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
-                                <font>
-                                    <Font size="35.0" />
-                                </font>
-                            </Label>
-                            <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
-                                <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
-                                    <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                        <font>
-                                            <Font size="15.0" />
-                                        </font>
-                                    </Label>
-                                </Tab>
-                                <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
-                                    <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                        <font>
-                                            <Font size="15.0" />
-                                        </font>
-                                    </Label>
-                                </Tab>
-                                <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
-                                    <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                        <font>
-                                            <Font size="15.0" />
-                                        </font>
-                                    </Label>
-                                </Tab>
-                            </TabPane>
+                            <fx:include source="calendarCell.fxml"/>
                         </GridPane>
                         <GridPane GridPane.rowIndex="7">
-                            <columnConstraints>
-                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
-                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
-                            </columnConstraints>
-                            <rowConstraints>
-                                <RowConstraints vgrow="ALWAYS" />
-                            </rowConstraints>
-                            <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="17" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
-                                <font>
-                                    <Font size="35.0" />
-                                </font>
-                            </Label>
-                            <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
-                                <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
-                                    <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                        <font>
-                                            <Font size="15.0" />
-                                        </font>
-                                    </Label>
-                                </Tab>
-                                <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
-                                    <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                        <font>
-                                            <Font size="15.0" />
-                                        </font>
-                                    </Label>
-                                </Tab>
-                                <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
-                                    <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                        <font>
-                                            <Font size="15.0" />
-                                        </font>
-                                    </Label>
-                                </Tab>
-                            </TabPane>
+                            <fx:include source="calendarCell.fxml"/>
                         </GridPane>
                     </GridPane>
                 <SplitPane orientation="VERTICAL" prefHeight="260.0" prefWidth="200.0" style="-fx-background-color: transparent" GridPane.columnIndex="1">
@@ -387,300 +115,28 @@
                         <RowConstraints percentHeight="12.5" />
                     </rowConstraints>
                     <GridPane>
-                        <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
-                        </columnConstraints>
-                        <rowConstraints>
-                            <RowConstraints vgrow="ALWAYS" />
-                        </rowConstraints>
-                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="10" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
-                            <font>
-                                <Font size="35.0" />
-                            </font>
-                        </Label>
-                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
-                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
-                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
-                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                        </TabPane>
-                </GridPane>
+                        <fx:include source="calendarCell.fxml"/>
+                    </GridPane>
                     <GridPane GridPane.rowIndex="1">
-                        <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
-                        </columnConstraints>
-                        <rowConstraints>
-                            <RowConstraints vgrow="ALWAYS" />
-                        </rowConstraints>
-                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="11" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
-                            <font>
-                                <Font size="35.0" />
-                            </font>
-                        </Label>
-                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
-                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
-                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
-                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                        </TabPane>
+                        <fx:include source="calendarCell.fxml"/>
                     </GridPane>
                     <GridPane GridPane.rowIndex="2">
-                        <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
-                        </columnConstraints>
-                        <rowConstraints>
-                            <RowConstraints vgrow="ALWAYS" />
-                        </rowConstraints>
-                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="12" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
-                            <font>
-                                <Font size="35.0" />
-                            </font>
-                        </Label>
-                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
-                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
-                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
-                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                        </TabPane>
+                        <fx:include source="calendarCell.fxml"/>
                     </GridPane>
                     <GridPane GridPane.rowIndex="3">
-                        <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
-                        </columnConstraints>
-                        <rowConstraints>
-                            <RowConstraints vgrow="ALWAYS" />
-                        </rowConstraints>
-                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="13" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
-                            <font>
-                                <Font size="35.0" />
-                            </font>
-                        </Label>
-                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
-                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
-                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
-                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                        </TabPane>
+                        <fx:include source="calendarCell.fxml"/>
                     </GridPane>
                     <GridPane GridPane.rowIndex="4">
-                        <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
-                        </columnConstraints>
-                        <rowConstraints>
-                            <RowConstraints vgrow="ALWAYS" />
-                        </rowConstraints>
-                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="14" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
-                            <font>
-                                <Font size="35.0" />
-                            </font>
-                        </Label>
-                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
-                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
-                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
-                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                        </TabPane>
+                        <fx:include source="calendarCell.fxml"/>
                     </GridPane>
                     <GridPane GridPane.rowIndex="5">
-                        <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
-                        </columnConstraints>
-                        <rowConstraints>
-                            <RowConstraints vgrow="ALWAYS" />
-                        </rowConstraints>
-                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="15" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
-                            <font>
-                                <Font size="35.0" />
-                            </font>
-                        </Label>
-                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
-                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
-                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
-                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                        </TabPane>
+                        <fx:include source="calendarCell.fxml"/>
                     </GridPane>
                     <GridPane GridPane.rowIndex="6">
-                        <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
-                        </columnConstraints>
-                        <rowConstraints>
-                            <RowConstraints vgrow="ALWAYS" />
-                        </rowConstraints>
-                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="16" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
-                            <font>
-                                <Font size="35.0" />
-                            </font>
-                        </Label>
-                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
-                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
-                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
-                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                        </TabPane>
+                        <fx:include source="calendarCell.fxml"/>
                     </GridPane>
                     <GridPane GridPane.rowIndex="7">
-                        <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
-                        </columnConstraints>
-                        <rowConstraints>
-                            <RowConstraints vgrow="ALWAYS" />
-                        </rowConstraints>
-                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="17" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
-                            <font>
-                                <Font size="35.0" />
-                            </font>
-                        </Label>
-                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
-                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
-                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
-                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                        </TabPane>
+                        <fx:include source="calendarCell.fxml"/>
                     </GridPane>
                 </GridPane>
                 <SplitPane orientation="VERTICAL" prefHeight="200.0" prefWidth="260.0" style="-fx-background-color: transparent" GridPane.columnIndex="2">
@@ -717,300 +173,28 @@
                         <RowConstraints percentHeight="12.5" />
                     </rowConstraints>
                     <GridPane>
-                        <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
-                        </columnConstraints>
-                        <rowConstraints>
-                            <RowConstraints vgrow="ALWAYS" />
-                        </rowConstraints>
-                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="10" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
-                            <font>
-                                <Font size="35.0" />
-                            </font>
-                        </Label>
-                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
-                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
-                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
-                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                        </TabPane>
+                        <fx:include source="calendarCell.fxml"/>
                     </GridPane>
                     <GridPane GridPane.rowIndex="1">
-                        <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
-                        </columnConstraints>
-                        <rowConstraints>
-                            <RowConstraints vgrow="ALWAYS" />
-                        </rowConstraints>
-                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="11" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
-                            <font>
-                                <Font size="35.0" />
-                            </font>
-                        </Label>
-                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
-                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
-                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
-                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                        </TabPane>
+                        <fx:include source="calendarCell.fxml"/>
                     </GridPane>
                     <GridPane GridPane.rowIndex="2">
-                        <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
-                        </columnConstraints>
-                        <rowConstraints>
-                            <RowConstraints vgrow="ALWAYS" />
-                        </rowConstraints>
-                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="12" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
-                            <font>
-                                <Font size="35.0" />
-                            </font>
-                        </Label>
-                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
-                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
-                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
-                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                        </TabPane>
+                        <fx:include source="calendarCell.fxml"/>
                     </GridPane>
                     <GridPane GridPane.rowIndex="3">
-                        <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
-                        </columnConstraints>
-                        <rowConstraints>
-                            <RowConstraints vgrow="ALWAYS" />
-                        </rowConstraints>
-                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="13" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
-                            <font>
-                                <Font size="35.0" />
-                            </font>
-                        </Label>
-                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
-                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
-                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
-                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                        </TabPane>
+                        <fx:include source="calendarCell.fxml"/>
                     </GridPane>
                     <GridPane GridPane.rowIndex="4">
-                        <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
-                        </columnConstraints>
-                        <rowConstraints>
-                            <RowConstraints vgrow="ALWAYS" />
-                        </rowConstraints>
-                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="14" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
-                            <font>
-                                <Font size="35.0" />
-                            </font>
-                        </Label>
-                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
-                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
-                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
-                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                        </TabPane>
+                        <fx:include source="calendarCell.fxml"/>
                     </GridPane>
                     <GridPane GridPane.rowIndex="5">
-                        <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
-                        </columnConstraints>
-                        <rowConstraints>
-                            <RowConstraints vgrow="ALWAYS" />
-                        </rowConstraints>
-                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="15" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
-                            <font>
-                                <Font size="35.0" />
-                            </font>
-                        </Label>
-                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
-                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
-                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
-                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                        </TabPane>
+                        <fx:include source="calendarCell.fxml"/>
                     </GridPane>
                     <GridPane GridPane.rowIndex="6">
-                        <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
-                        </columnConstraints>
-                        <rowConstraints>
-                            <RowConstraints vgrow="ALWAYS" />
-                        </rowConstraints>
-                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="16" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
-                            <font>
-                                <Font size="35.0" />
-                            </font>
-                        </Label>
-                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
-                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
-                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
-                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                        </TabPane>
+                        <fx:include source="calendarCell.fxml"/>
                     </GridPane>
                     <GridPane GridPane.rowIndex="7">
-                        <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
-                        </columnConstraints>
-                        <rowConstraints>
-                            <RowConstraints vgrow="ALWAYS" />
-                        </rowConstraints>
-                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="17" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
-                            <font>
-                                <Font size="35.0" />
-                            </font>
-                        </Label>
-                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
-                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
-                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
-                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                        </TabPane>
+                        <fx:include source="calendarCell.fxml"/>
                     </GridPane>
                 </GridPane>
                 <SplitPane orientation="VERTICAL" prefHeight="200.0" prefWidth="260.0" style="-fx-background-color: transparent" GridPane.columnIndex="3">
@@ -1047,300 +231,28 @@
                         <RowConstraints percentHeight="12.5" />
                     </rowConstraints>
                     <GridPane>
-                        <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
-                        </columnConstraints>
-                        <rowConstraints>
-                            <RowConstraints vgrow="ALWAYS" />
-                        </rowConstraints>
-                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="10" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
-                            <font>
-                                <Font size="35.0" />
-                            </font>
-                        </Label>
-                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
-                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
-                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
-                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                        </TabPane>
+                        <fx:include source="calendarCell.fxml"/>
                     </GridPane>
                     <GridPane GridPane.rowIndex="1">
-                        <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
-                        </columnConstraints>
-                        <rowConstraints>
-                            <RowConstraints vgrow="ALWAYS" />
-                        </rowConstraints>
-                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="11" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
-                            <font>
-                                <Font size="35.0" />
-                            </font>
-                        </Label>
-                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
-                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
-                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
-                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                        </TabPane>
+                        <fx:include source="calendarCell.fxml"/>
                     </GridPane>
                     <GridPane GridPane.rowIndex="2">
-                        <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
-                        </columnConstraints>
-                        <rowConstraints>
-                            <RowConstraints vgrow="ALWAYS" />
-                        </rowConstraints>
-                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="12" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
-                            <font>
-                                <Font size="35.0" />
-                            </font>
-                        </Label>
-                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
-                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
-                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
-                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                        </TabPane>
+                        <fx:include source="calendarCell.fxml"/>
                     </GridPane>
                     <GridPane GridPane.rowIndex="3">
-                        <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
-                        </columnConstraints>
-                        <rowConstraints>
-                            <RowConstraints vgrow="ALWAYS" />
-                        </rowConstraints>
-                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="13" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
-                            <font>
-                                <Font size="35.0" />
-                            </font>
-                        </Label>
-                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
-                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
-                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
-                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                        </TabPane>
+                        <fx:include source="calendarCell.fxml"/>
                     </GridPane>
                     <GridPane GridPane.rowIndex="4">
-                        <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
-                        </columnConstraints>
-                        <rowConstraints>
-                            <RowConstraints vgrow="ALWAYS" />
-                        </rowConstraints>
-                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="14" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
-                            <font>
-                                <Font size="35.0" />
-                            </font>
-                        </Label>
-                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
-                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
-                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
-                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                        </TabPane>
+                        <fx:include source="calendarCell.fxml"/>
                     </GridPane>
                     <GridPane GridPane.rowIndex="5">
-                        <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
-                        </columnConstraints>
-                        <rowConstraints>
-                            <RowConstraints vgrow="ALWAYS" />
-                        </rowConstraints>
-                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="15" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
-                            <font>
-                                <Font size="35.0" />
-                            </font>
-                        </Label>
-                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
-                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
-                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
-                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                        </TabPane>
+                        <fx:include source="calendarCell.fxml"/>
                     </GridPane>
                     <GridPane GridPane.rowIndex="6">
-                        <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
-                        </columnConstraints>
-                        <rowConstraints>
-                            <RowConstraints vgrow="ALWAYS" />
-                        </rowConstraints>
-                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="16" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
-                            <font>
-                                <Font size="35.0" />
-                            </font>
-                        </Label>
-                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
-                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
-                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
-                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                        </TabPane>
+                        <fx:include source="calendarCell.fxml"/>
                     </GridPane>
                     <GridPane GridPane.rowIndex="7">
-                        <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
-                        </columnConstraints>
-                        <rowConstraints>
-                            <RowConstraints vgrow="ALWAYS" />
-                        </rowConstraints>
-                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="17" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
-                            <font>
-                                <Font size="35.0" />
-                            </font>
-                        </Label>
-                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
-                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
-                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
-                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                        </TabPane>
+                        <fx:include source="calendarCell.fxml"/>
                     </GridPane>
                 </GridPane>
                 <SplitPane orientation="VERTICAL" prefHeight="200.0" prefWidth="260.0" style="-fx-background-color: transparent" GridPane.columnIndex="4">
@@ -1377,300 +289,28 @@
                         <RowConstraints percentHeight="12.5" />
                     </rowConstraints>
                     <GridPane>
-                        <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
-                        </columnConstraints>
-                        <rowConstraints>
-                            <RowConstraints vgrow="ALWAYS" />
-                        </rowConstraints>
-                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="10" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
-                            <font>
-                                <Font size="35.0" />
-                            </font>
-                        </Label>
-                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
-                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
-                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
-                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                        </TabPane>
+                        <fx:include source="calendarCell.fxml"/>
                     </GridPane>
                     <GridPane GridPane.rowIndex="1">
-                        <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
-                        </columnConstraints>
-                        <rowConstraints>
-                            <RowConstraints vgrow="ALWAYS" />
-                        </rowConstraints>
-                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="11" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
-                            <font>
-                                <Font size="35.0" />
-                            </font>
-                        </Label>
-                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
-                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
-                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
-                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                        </TabPane>
+                        <fx:include source="calendarCell.fxml"/>
                     </GridPane>
                     <GridPane GridPane.rowIndex="2">
-                        <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
-                        </columnConstraints>
-                        <rowConstraints>
-                            <RowConstraints vgrow="ALWAYS" />
-                        </rowConstraints>
-                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="12" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
-                            <font>
-                                <Font size="35.0" />
-                            </font>
-                        </Label>
-                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
-                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
-                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
-                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                        </TabPane>
+                        <fx:include source="calendarCell.fxml"/>
                     </GridPane>
                     <GridPane GridPane.rowIndex="3">
-                        <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
-                        </columnConstraints>
-                        <rowConstraints>
-                            <RowConstraints vgrow="ALWAYS" />
-                        </rowConstraints>
-                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="13" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
-                            <font>
-                                <Font size="35.0" />
-                            </font>
-                        </Label>
-                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
-                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
-                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
-                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                        </TabPane>
+                        <fx:include source="calendarCell.fxml"/>
                     </GridPane>
                     <GridPane GridPane.rowIndex="4">
-                        <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
-                        </columnConstraints>
-                        <rowConstraints>
-                            <RowConstraints vgrow="ALWAYS" />
-                        </rowConstraints>
-                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="14" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
-                            <font>
-                                <Font size="35.0" />
-                            </font>
-                        </Label>
-                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
-                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
-                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
-                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                        </TabPane>
+                        <fx:include source="calendarCell.fxml"/>
                     </GridPane>
                     <GridPane GridPane.rowIndex="5">
-                        <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
-                        </columnConstraints>
-                        <rowConstraints>
-                            <RowConstraints vgrow="ALWAYS" />
-                        </rowConstraints>
-                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="15" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
-                            <font>
-                                <Font size="35.0" />
-                            </font>
-                        </Label>
-                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
-                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
-                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
-                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                        </TabPane>
+                        <fx:include source="calendarCell.fxml"/>
                     </GridPane>
                     <GridPane GridPane.rowIndex="6">
-                        <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
-                        </columnConstraints>
-                        <rowConstraints>
-                            <RowConstraints vgrow="ALWAYS" />
-                        </rowConstraints>
-                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="16" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
-                            <font>
-                                <Font size="35.0" />
-                            </font>
-                        </Label>
-                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
-                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
-                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
-                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                        </TabPane>
+                        <fx:include source="calendarCell.fxml"/>
                     </GridPane>
                     <GridPane GridPane.rowIndex="7">
-                        <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
-                        </columnConstraints>
-                        <rowConstraints>
-                            <RowConstraints vgrow="ALWAYS" />
-                        </rowConstraints>
-                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="17" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
-                            <font>
-                                <Font size="35.0" />
-                            </font>
-                        </Label>
-                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
-                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
-                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
-                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                        </TabPane>
+                        <fx:include source="calendarCell.fxml"/>
                     </GridPane>
                 </GridPane>
                 <SplitPane orientation="VERTICAL" prefHeight="200.0" prefWidth="260.0" style="-fx-background-color: transparent" GridPane.columnIndex="5">
@@ -1703,152 +343,16 @@
                         <RowConstraints percentHeight="12.5" />
                     </rowConstraints>
                     <GridPane>
-                        <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
-                        </columnConstraints>
-                        <rowConstraints>
-                            <RowConstraints vgrow="ALWAYS" />
-                        </rowConstraints>
-                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="10" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
-                            <font>
-                                <Font size="35.0" />
-                            </font>
-                        </Label>
-                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
-                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
-                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
-                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                        </TabPane>
+                        <fx:include source="calendarCell.fxml"/>
                     </GridPane>
                     <GridPane GridPane.rowIndex="1">
-                        <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
-                        </columnConstraints>
-                        <rowConstraints>
-                            <RowConstraints vgrow="ALWAYS" />
-                        </rowConstraints>
-                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="11" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
-                            <font>
-                                <Font size="35.0" />
-                            </font>
-                        </Label>
-                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
-                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
-                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
-                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                        </TabPane>
+                        <fx:include source="calendarCell.fxml"/>
                     </GridPane>
                     <GridPane GridPane.rowIndex="2">
-                        <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
-                        </columnConstraints>
-                        <rowConstraints>
-                            <RowConstraints vgrow="ALWAYS" />
-                        </rowConstraints>
-                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="12" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
-                            <font>
-                                <Font size="35.0" />
-                            </font>
-                        </Label>
-                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
-                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
-                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
-                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                        </TabPane>
+                        <fx:include source="calendarCell.fxml"/>
                     </GridPane>
                     <GridPane GridPane.rowIndex="3">
-                        <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.00" />
-                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="75.00" />
-                        </columnConstraints>
-                        <rowConstraints>
-                            <RowConstraints vgrow="ALWAYS" />
-                        </rowConstraints>
-                        <Label alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" text="13" textFill="aliceblue" GridPane.columnIndex="0" GridPane.valignment="CENTER">
-                            <font>
-                                <Font size="35.0" />
-                            </font>
-                        </Label>
-                        <TabPane style="-fx-background-color: transparent; -fx-text-fill: red" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke; -fx-text-fill: red" text="rower1">
-                                <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower2">
-                                <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                            <Tab style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="rower3">
-                                <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </Tab>
-                        </TabPane>
+                        <fx:include source="calendarCell.fxml"/>
                     </GridPane>
                 </GridPane>
             </GridPane>
@@ -1857,7 +361,9 @@
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
         </Tab>
         <Tab text="Rowery na stanie">
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <TableView/>
+            </AnchorPane>
         </Tab>
     </TabPane>
     <VBox alignment="TOP_CENTER" prefHeight="595.0" prefWidth="250.0" spacing="30.0" GridPane.columnIndex="1">
