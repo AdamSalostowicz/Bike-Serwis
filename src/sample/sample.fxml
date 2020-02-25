@@ -10,7 +10,7 @@
         <ColumnConstraints hgrow="SOMETIMES" percentWidth="90" />
         <ColumnConstraints hgrow="SOMETIMES" percentWidth="10" />
     </columnConstraints>
-    <TabPane layoutX="10.0" layoutY="10.0" prefHeight="1000" prefWidth="Infinity" style="-fx-background-color: transparent" tabClosingPolicy="UNAVAILABLE" stylesheets="@mainTabPane.css">
+    <TabPane layoutX="10.0" layoutY="10.0" prefHeight="1000" prefWidth="Infinity" style="-fx-background-color: transparent" stylesheets="@mainTabPane.css" tabClosingPolicy="UNAVAILABLE">
         <Tab text="Kalendarz">
             <GridPane gridLinesVisible="true" prefHeight="NaN" prefWidth="Infinity">
                 <columnConstraints>
@@ -57,28 +57,76 @@
                             <RowConstraints percentHeight="12.5" />
                         </rowConstraints>
                         <GridPane fx:id="gridPane">
-                            <fx:include source="calendarCell.fxml"/>
+                            <fx:include source="calendarCell.fxml" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                  </rowConstraints>
                         </GridPane>
                         <GridPane GridPane.rowIndex="1">
-                            <fx:include source="calendarCell.fxml"/>
+                            <fx:include source="calendarCell.fxml" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                  </rowConstraints>
                         </GridPane>
                         <GridPane GridPane.rowIndex="2">
-                            <fx:include source="calendarCell.fxml"/>
+                            <fx:include source="calendarCell.fxml" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                  </rowConstraints>
                         </GridPane>
                         <GridPane GridPane.rowIndex="3">
-                            <fx:include source="calendarCell.fxml"/>
+                            <fx:include source="calendarCell.fxml" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                  </rowConstraints>
                         </GridPane>
                         <GridPane GridPane.rowIndex="4">
-                            <fx:include source="calendarCell.fxml"/>
+                            <fx:include source="calendarCell.fxml" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                  </rowConstraints>
                         </GridPane>
                         <GridPane GridPane.rowIndex="5">
-                            <fx:include source="calendarCell.fxml"/>
+                            <fx:include source="calendarCell.fxml" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                  </rowConstraints>
                         </GridPane>
                         <GridPane GridPane.rowIndex="6">
-                            <fx:include source="calendarCell.fxml"/>
+                            <fx:include source="calendarCell.fxml" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                  </rowConstraints>
                         </GridPane>
                         <GridPane GridPane.rowIndex="7">
-                            <fx:include source="calendarCell.fxml"/>
+                            <fx:include source="calendarCell.fxml" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                  </rowConstraints>
                         </GridPane>
                     </GridPane>
                 <SplitPane orientation="VERTICAL" prefHeight="260.0" prefWidth="200.0" style="-fx-background-color: transparent" GridPane.columnIndex="1">
@@ -115,28 +163,76 @@
                         <RowConstraints percentHeight="12.5" />
                     </rowConstraints>
                     <GridPane>
-                        <fx:include source="calendarCell.fxml"/>
+                        <fx:include source="calendarCell.fxml" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                  </rowConstraints>
                     </GridPane>
                     <GridPane GridPane.rowIndex="1">
-                        <fx:include source="calendarCell.fxml"/>
+                        <fx:include source="calendarCell.fxml" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                  </rowConstraints>
                     </GridPane>
                     <GridPane GridPane.rowIndex="2">
-                        <fx:include source="calendarCell.fxml"/>
+                        <fx:include source="calendarCell.fxml" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                  </rowConstraints>
                     </GridPane>
                     <GridPane GridPane.rowIndex="3">
-                        <fx:include source="calendarCell.fxml"/>
+                        <fx:include source="calendarCell.fxml" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                  </rowConstraints>
                     </GridPane>
                     <GridPane GridPane.rowIndex="4">
-                        <fx:include source="calendarCell.fxml"/>
+                        <fx:include source="calendarCell.fxml" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                  </rowConstraints>
                     </GridPane>
                     <GridPane GridPane.rowIndex="5">
-                        <fx:include source="calendarCell.fxml"/>
+                        <fx:include source="calendarCell.fxml" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                  </rowConstraints>
                     </GridPane>
                     <GridPane GridPane.rowIndex="6">
-                        <fx:include source="calendarCell.fxml"/>
+                        <fx:include source="calendarCell.fxml" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                  </rowConstraints>
                     </GridPane>
                     <GridPane GridPane.rowIndex="7">
-                        <fx:include source="calendarCell.fxml"/>
+                        <fx:include source="calendarCell.fxml" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                  </rowConstraints>
                     </GridPane>
                 </GridPane>
                 <SplitPane orientation="VERTICAL" prefHeight="200.0" prefWidth="260.0" style="-fx-background-color: transparent" GridPane.columnIndex="2">
@@ -173,28 +269,76 @@
                         <RowConstraints percentHeight="12.5" />
                     </rowConstraints>
                     <GridPane>
-                        <fx:include source="calendarCell.fxml"/>
+                        <fx:include source="calendarCell.fxml" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                  </rowConstraints>
                     </GridPane>
                     <GridPane GridPane.rowIndex="1">
-                        <fx:include source="calendarCell.fxml"/>
+                        <fx:include source="calendarCell.fxml" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                  </rowConstraints>
                     </GridPane>
                     <GridPane GridPane.rowIndex="2">
-                        <fx:include source="calendarCell.fxml"/>
+                        <fx:include source="calendarCell.fxml" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                  </rowConstraints>
                     </GridPane>
                     <GridPane GridPane.rowIndex="3">
-                        <fx:include source="calendarCell.fxml"/>
+                        <fx:include source="calendarCell.fxml" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                  </rowConstraints>
                     </GridPane>
                     <GridPane GridPane.rowIndex="4">
-                        <fx:include source="calendarCell.fxml"/>
+                        <fx:include source="calendarCell.fxml" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                  </rowConstraints>
                     </GridPane>
                     <GridPane GridPane.rowIndex="5">
-                        <fx:include source="calendarCell.fxml"/>
+                        <fx:include source="calendarCell.fxml" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                  </rowConstraints>
                     </GridPane>
                     <GridPane GridPane.rowIndex="6">
-                        <fx:include source="calendarCell.fxml"/>
+                        <fx:include source="calendarCell.fxml" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                  </rowConstraints>
                     </GridPane>
                     <GridPane GridPane.rowIndex="7">
-                        <fx:include source="calendarCell.fxml"/>
+                        <fx:include source="calendarCell.fxml" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                  </rowConstraints>
                     </GridPane>
                 </GridPane>
                 <SplitPane orientation="VERTICAL" prefHeight="200.0" prefWidth="260.0" style="-fx-background-color: transparent" GridPane.columnIndex="3">
@@ -231,28 +375,76 @@
                         <RowConstraints percentHeight="12.5" />
                     </rowConstraints>
                     <GridPane>
-                        <fx:include source="calendarCell.fxml"/>
+                        <fx:include source="calendarCell.fxml" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                  </rowConstraints>
                     </GridPane>
                     <GridPane GridPane.rowIndex="1">
-                        <fx:include source="calendarCell.fxml"/>
+                        <fx:include source="calendarCell.fxml" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                  </rowConstraints>
                     </GridPane>
                     <GridPane GridPane.rowIndex="2">
-                        <fx:include source="calendarCell.fxml"/>
+                        <fx:include source="calendarCell.fxml" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                  </rowConstraints>
                     </GridPane>
                     <GridPane GridPane.rowIndex="3">
-                        <fx:include source="calendarCell.fxml"/>
+                        <fx:include source="calendarCell.fxml" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                  </rowConstraints>
                     </GridPane>
                     <GridPane GridPane.rowIndex="4">
-                        <fx:include source="calendarCell.fxml"/>
+                        <fx:include source="calendarCell.fxml" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                  </rowConstraints>
                     </GridPane>
                     <GridPane GridPane.rowIndex="5">
-                        <fx:include source="calendarCell.fxml"/>
+                        <fx:include source="calendarCell.fxml" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                  </rowConstraints>
                     </GridPane>
                     <GridPane GridPane.rowIndex="6">
-                        <fx:include source="calendarCell.fxml"/>
+                        <fx:include source="calendarCell.fxml" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                  </rowConstraints>
                     </GridPane>
                     <GridPane GridPane.rowIndex="7">
-                        <fx:include source="calendarCell.fxml"/>
+                        <fx:include source="calendarCell.fxml" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                  </rowConstraints>
                     </GridPane>
                 </GridPane>
                 <SplitPane orientation="VERTICAL" prefHeight="200.0" prefWidth="260.0" style="-fx-background-color: transparent" GridPane.columnIndex="4">
@@ -289,28 +481,76 @@
                         <RowConstraints percentHeight="12.5" />
                     </rowConstraints>
                     <GridPane>
-                        <fx:include source="calendarCell.fxml"/>
+                        <fx:include source="calendarCell.fxml" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                  </rowConstraints>
                     </GridPane>
                     <GridPane GridPane.rowIndex="1">
-                        <fx:include source="calendarCell.fxml"/>
+                        <fx:include source="calendarCell.fxml" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                  </rowConstraints>
                     </GridPane>
                     <GridPane GridPane.rowIndex="2">
-                        <fx:include source="calendarCell.fxml"/>
+                        <fx:include source="calendarCell.fxml" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                  </rowConstraints>
                     </GridPane>
                     <GridPane GridPane.rowIndex="3">
-                        <fx:include source="calendarCell.fxml"/>
+                        <fx:include source="calendarCell.fxml" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                  </rowConstraints>
                     </GridPane>
                     <GridPane GridPane.rowIndex="4">
-                        <fx:include source="calendarCell.fxml"/>
+                        <fx:include source="calendarCell.fxml" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                  </rowConstraints>
                     </GridPane>
                     <GridPane GridPane.rowIndex="5">
-                        <fx:include source="calendarCell.fxml"/>
+                        <fx:include source="calendarCell.fxml" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                  </rowConstraints>
                     </GridPane>
                     <GridPane GridPane.rowIndex="6">
-                        <fx:include source="calendarCell.fxml"/>
+                        <fx:include source="calendarCell.fxml" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                  </rowConstraints>
                     </GridPane>
                     <GridPane GridPane.rowIndex="7">
-                        <fx:include source="calendarCell.fxml"/>
+                        <fx:include source="calendarCell.fxml" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                  </rowConstraints>
                     </GridPane>
                 </GridPane>
                 <SplitPane orientation="VERTICAL" prefHeight="200.0" prefWidth="260.0" style="-fx-background-color: transparent" GridPane.columnIndex="5">
@@ -343,16 +583,40 @@
                         <RowConstraints percentHeight="12.5" />
                     </rowConstraints>
                     <GridPane>
-                        <fx:include source="calendarCell.fxml"/>
+                        <fx:include source="calendarCell.fxml" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                  </rowConstraints>
                     </GridPane>
                     <GridPane GridPane.rowIndex="1">
-                        <fx:include source="calendarCell.fxml"/>
+                        <fx:include source="calendarCell.fxml" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                  </rowConstraints>
                     </GridPane>
                     <GridPane GridPane.rowIndex="2">
-                        <fx:include source="calendarCell.fxml"/>
+                        <fx:include source="calendarCell.fxml" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                  </rowConstraints>
                     </GridPane>
                     <GridPane GridPane.rowIndex="3">
-                        <fx:include source="calendarCell.fxml"/>
+                        <fx:include source="calendarCell.fxml" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                  </rowConstraints>
                     </GridPane>
                 </GridPane>
             </GridPane>
@@ -360,9 +624,15 @@
         <Tab text="Wolne terminy">
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
         </Tab>
-        <Tab text="Rowery na stanie">
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                    <TableView/>
+        <Tab fx:id="roweryNaStanie" text="Rowery na stanie">
+            <AnchorPane fx:id="anchorPaneRoweryNastanie" minHeight="0.0" minWidth="0.0" stylesheets="@anchorPaneRoweryNaStanie.css">
+                    <TableView fx:id="tableRoweryNaStanie" layoutX="50.0" layoutY="51.0" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="51.0">
+                        <columns>
+                            <TableColumn fx:id="col1" prefWidth="508.0" text="Rower" />
+                            <TableColumn fx:id="col2" prefWidth="152.0" text="Data przyjęcia" />
+                            <TableColumn fx:id="col3" minWidth="0.0" prefWidth="138.0" text="Data wydania" />
+                        </columns>
+                    </TableView>
             </AnchorPane>
         </Tab>
     </TabPane>

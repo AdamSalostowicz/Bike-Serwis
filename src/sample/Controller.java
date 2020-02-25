@@ -1,10 +1,15 @@
 package sample;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -12,12 +17,14 @@ import java.util.Calendar;
 import java.util.ResourceBundle;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
-
+import static sample.Main.conn;
 
 public class Controller implements Initializable {
 
@@ -47,7 +54,14 @@ public class Controller implements Initializable {
     private Label month6;
     @FXML
     static GridPane gridPane;
-
+    @FXML
+    private TableView<TableBike> tableRoweryNaStanie;
+    @FXML
+    private TableColumn<TableBike, String> col1;
+    @FXML
+    private TableColumn<TableBike, String> col2;
+    @FXML
+    private TableColumn<TableBike, String> col3;
     private LocalDateTime now;
     private DayOfWeek currentDayofWeek;
     private Calendar cal;
@@ -58,8 +72,9 @@ public class Controller implements Initializable {
     private Stage stage2 = new Stage();
     private Stage stage3 = new Stage();
     private Stage stage4 = new Stage();
-
-
+    private ObservableList<TableBike> observableListBikes = FXCollections.observableArrayList();
+    public Statement stmt1 = null;
+    public ResultSet resultSet = null;
 
     @FXML
     private void addBike() throws IOException {
@@ -104,11 +119,38 @@ public class Controller implements Initializable {
         currentDayofWeek = now.getDayOfWeek();
         showCurrentDate();
 //        showCurrentDay();
-        dayOfWeek();
+//        dayOfWeek();
         month();
+        try {
+            startTableRoweryNaStanie();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
-    private void dayOfWeek(){
-
+    private void startTableRoweryNaStanie() throws SQLException {
+        String bikeName = null, dateAcceptance = null, dateFixed = null, dateReleased = "";
+        stmt1 = conn.createStatement();
+        resultSet = stmt1.executeQuery("select bike_name, date_acceptance, date_fixed,date_released from bike inner join main on bike_id=bike_id_fkey inner join date on date_id=date_id_fkey");
+        while (resultSet.next()){
+            bikeName = resultSet.getString(1);
+            dateAcceptance = resultSet.getString(2);
+            dateFixed = resultSet.getString(3);
+            dateReleased = resultSet.getString(4);
+            System.out.println(bikeName + " " + dateAcceptance + " " + dateFixed + " +" + dateReleased + "+");
+            if (dateReleased == null){
+                observableListBikes.add(new TableBike(bikeName, dateAcceptance, dateFixed));
+                System.out.println("pykło");
+                System.out.println(observableListBikes.get(observableListBikes.size() - 1).getBikeName());
+            }
+            dateReleased = "";
+        }
+        col1.setCellValueFactory(
+                new PropertyValueFactory<TableBike, String>("bikeName"));
+        col2.setCellValueFactory(
+                new PropertyValueFactory<TableBike, String>("dateAcceptance"));
+        col3.setCellValueFactory(
+                new PropertyValueFactory<TableBike, String>("dateFixed"));
+        tableRoweryNaStanie.setItems(observableListBikes);
     }
 
     private void month(){
@@ -120,34 +162,6 @@ public class Controller implements Initializable {
         month5.setText(polishMonth);
         month6.setText(polishMonth);
     }
-//    private void showCurrentDay(){
-//        switch (currentDayofWeek.getValue()){
-//            case 1:
-//                anchor1.setStyle("-fx-border-color: white; -fx-border-style: inset");
-//                label1.setText(String.valueOf(now.getDayOfMonth()));
-//                break;
-//            case 2:
-//                anchor2.setStyle("-fx-border-color: white; -fx-border-style: inset");
-//                label2.setText(String.valueOf(now.getDayOfMonth()));
-//                break;
-//            case 3:
-//                anchor3.setStyle("-fx-border-color: white; -fx-border-style: inset");
-//                label3.setText(String.valueOf(now.getDayOfMonth()));
-//                break;
-//            case 4:
-//                anchor4.setStyle("-fx-border-color: white; -fx-border-style: inset");
-//                label4.setText(String.valueOf(now.getDayOfMonth()));
-//                break;
-//            case 5:
-//                anchor5.setStyle("-fx-border-color: white; -fx-border-style: inset");
-//                label5.setText(String.valueOf(now.getDayOfMonth()));
-//                break;
-//            case 6:
-//                anchor6.setStyle("-fx-border-color: white; -fx-border-style: inset");
-//                label6.setText(String.valueOf(now.getDayOfMonth()));
-//                break;
-//        }
-//    }
     private void showCurrentDate(){
         label1.setText(String.valueOf(LocalDate.from(DayOfWeek.MONDAY.adjustInto(LocalDate.now())).getDayOfMonth()));
         label2.setText(String.valueOf(LocalDate.from(DayOfWeek.TUESDAY.adjustInto(LocalDate.now())).getDayOfMonth()));

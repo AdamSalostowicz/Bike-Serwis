@@ -7,7 +7,7 @@ import javafx.scene.control.TableView;
 import java.awt.*;
 import java.time.LocalDate;
 
-public class mainService {
+public class MainService {
     public String bikeModel;
     public String bikeDescription;
     public String customerName;
@@ -24,7 +24,7 @@ public class mainService {
     @FXML public TextField bikeName;
     @FXML private TextField phoneNumber;
 
-    mainService() {
+    MainService() {
 //        dateAcceptance = LocalDate.now();
 //        setBikeModel(bikeName.getText());
 //        setBikeDescription(description.getText());
