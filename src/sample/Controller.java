@@ -5,6 +5,9 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import java.awt.*;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.ResultSet;
@@ -12,20 +15,16 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.Calendar;
 import java.util.ResourceBundle;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.*;
 import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.GridPane;
+import javafx.scene.image.Image;
+import javafx.scene.layout.*;
 import javafx.stage.Stage;
 import static sample.Main.conn;
-
 public class Controller implements Initializable {
 
     @FXML
@@ -62,12 +61,12 @@ public class Controller implements Initializable {
     private TableColumn<TableBike, String> col2;
     @FXML
     private TableColumn<TableBike, String> col3;
-    private LocalDateTime now;
-    private DayOfWeek currentDayofWeek;
-    private Calendar cal;
+    @FXML
+    private TabPane tabPane;
+    @FXML
+    private GridPane mainGrid;
     private int week = 0;
     private String[] polishMonths = {"styczeń", "luty", "marzec", "kwiecień", "maj", "czerwiec", "lipiec", "sierpień", "wrzesień", "październik", "listopad", "grudzień"};
-
     private Stage stage1 = new Stage();
     private Stage stage2 = new Stage();
     private Stage stage3 = new Stage();
@@ -114,12 +113,7 @@ public class Controller implements Initializable {
     }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        cal = Calendar.getInstance();
-        now = LocalDateTime.now();
-        currentDayofWeek = now.getDayOfWeek();
         showCurrentDate();
-//        showCurrentDay();
-//        dayOfWeek();
         month();
         try {
             startTableRoweryNaStanie();
@@ -127,6 +121,27 @@ public class Controller implements Initializable {
             e.printStackTrace();
         }
     }
+    @FXML
+    private void setDifferentBackgrund() throws FileNotFoundException {
+        String tapeta = null;
+        System.out.println(tabPane.getSelectionModel().getSelectedIndex());
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        double width = screenSize.getWidth();
+        double height = screenSize.getWidth();
+        switch (tabPane.getSelectionModel().getSelectedIndex()) {
+            case 0 : tapeta = "Graphic/cinelli.jpg";break;
+            case 1 : tapeta = "Graphic/citybike.jpg";break;
+            case 2 : tapeta = "Graphic/chain.jpg";break;
+        }
+        FileInputStream fileInputStream1 = new FileInputStream(tapeta);
+        Image image = new Image(fileInputStream1);
+        BackgroundImage bgi = new BackgroundImage(image, BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT, new BackgroundSize(width,height, true,true,true,true));
+        Background background = new Background(bgi);
+        mainGrid.setBackground(background);
+        System.out.println(tapeta);
+    }
+
+
     private void startTableRoweryNaStanie() throws SQLException {
         String bikeName = null, dateAcceptance = null, dateFixed = null, dateReleased = "";
         stmt1 = conn.createStatement();
