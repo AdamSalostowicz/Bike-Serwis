@@ -124,7 +124,6 @@ public class Controller implements Initializable {
     @FXML
     private void setDifferentBackgrund() throws FileNotFoundException {
         String tapeta = null;
-        System.out.println(tabPane.getSelectionModel().getSelectedIndex());
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         double width = screenSize.getWidth();
         double height = screenSize.getWidth();
@@ -138,7 +137,6 @@ public class Controller implements Initializable {
         BackgroundImage bgi = new BackgroundImage(image, BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT, new BackgroundSize(width,height, true,true,true,true));
         Background background = new Background(bgi);
         mainGrid.setBackground(background);
-        System.out.println(tapeta);
     }
 
 

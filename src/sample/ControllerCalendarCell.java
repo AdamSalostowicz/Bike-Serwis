@@ -28,5 +28,10 @@ public class ControllerCalendarCell implements Initializable {
         else if(number%8 == 7) labelInCell.setText("16");
         else if(number%8 == 0) labelInCell.setText("17");
         number++;
+        showBikesOnStock();
+    }
+
+    private void showBikesOnStock() {
+        
     }
 }

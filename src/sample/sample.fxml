@@ -5,13 +5,13 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<GridPane fx:id="mainGrid" gridLinesVisible="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800" prefWidth="1600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<GridPane fx:id="mainGrid" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800" prefWidth="1600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
     <columnConstraints>
         <ColumnConstraints hgrow="SOMETIMES" percentWidth="90" />
         <ColumnConstraints hgrow="SOMETIMES" percentWidth="10" />
     </columnConstraints>
     <TabPane fx:id="tabPane" layoutX="10.0" layoutY="10.0" prefHeight="1000" prefWidth="Infinity" style="-fx-background-color: transparent" stylesheets="@mainTabPane.css" tabClosingPolicy="UNAVAILABLE">
-        <Tab onSelectionChanged="#setDifferentBackgrund" fx:id="tab1" text="Kalendarz" >
+        <Tab fx:id="tab1" onSelectionChanged="#setDifferentBackgrund" text="Kalendarz">
             <GridPane gridLinesVisible="true" prefHeight="NaN" prefWidth="Infinity">
                 <columnConstraints>
                     <ColumnConstraints hgrow="SOMETIMES" percentWidth="16.6666" />
@@ -621,10 +621,10 @@
                 </GridPane>
             </GridPane>
         </Tab>
-        <Tab onSelectionChanged="#setDifferentBackgrund" fx:id="tab2" text="Wolne terminy">
+        <Tab fx:id="tab2" onSelectionChanged="#setDifferentBackgrund" text="Wolne terminy">
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
         </Tab>
-        <Tab onSelectionChanged="#setDifferentBackgrund" fx:id="tab3" text="Rowery na stanie">
+        <Tab fx:id="tab3" onSelectionChanged="#setDifferentBackgrund" text="Rowery na stanie">
             <AnchorPane fx:id="anchorPaneRoweryNastanie" minHeight="0.0" minWidth="0.0" stylesheets="@anchorPaneRoweryNaStanie.css">
                     <TableView fx:id="tableRoweryNaStanie" layoutX="50.0" layoutY="51.0" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="51.0">
                         <columns>

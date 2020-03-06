@@ -1,0 +1,102 @@
+[33mcommit 2c65786306bb7d310657bbdb7512287cba761742[m[33m ([m[1;36mHEAD -> [m[1;32mbackend2[m[33m)[m
+Author: adamsalostowicz <adamsalostowicz@gmail.com>
+Date:   Fri Feb 28 22:31:40 2020 +0100
+
+    I added changing backgrounds.
+
+[33mcommit dbfa7c3180dfc29ca196ad28850edc26ecae38fa[m
+Author: adamsalostowicz <adamsalostowicz@gmail.com>
+Date:   Tue Feb 25 23:06:47 2020 +0100
+
+    "One cell to rule them all, one cell to find them.
+    One cell to bring them all and in the darkness bind them."
+
+[33mcommit dc7106d8623ce72763a1e52be16731282d6cc135[m
+Author: adamsalostowicz <adamsalostowicz@gmail.com>
+Date:   Tue Feb 25 00:26:24 2020 +0100
+
+    CellOfCalendar is works!
+
+[33mcommit f9d8b04b0af630482eca290bd9c115b80c490f97[m
+Author: adamsalostowicz <adamsalostowicz@gmail.com>
+Date:   Sun Feb 23 22:13:28 2020 +0100
+
+    I added css's service.
+
+[33mcommit 08d7c01e244bd78e9f59052e529aab401c5f4b61[m
+Author: adamsalostowicz <adamsalostowicz@gmail.com>
+Date:   Sun Feb 23 00:01:05 2020 +0100
+
+    Adding bikes is working :).
+
+[33mcommit 04969b8671a432b7afcb036770222f237307de1e[m
+Author: adamsalostowicz <adamsalostowicz@gmail.com>
+Date:   Thu Feb 20 00:18:46 2020 +0100
+
+    I added possibility save data into database.
+
+[33mcommit f044c1fc75dff3e65241987e8315a02670ed39af[m
+Author: adamsalostowicz <adamsalostowicz@gmail.com>
+Date:   Fri Feb 14 00:38:30 2020 +0100
+
+    I fixed "deleting row" and "adding row".
+
+[33mcommit 8052bea96c8259ec6a8a34addcbce09014b8f17d[m
+Author: adamsalostowicz <adamsalostowicz@gmail.com>
+Date:   Wed Feb 12 00:12:57 2020 +0100
+
+    Work in progress. (still).
+
+[33mcommit 51bd6ad0d43bdcaae64e529671d33b2e13e582d2[m
+Author: adamsalostowicz <adamsalostowicz@gmail.com>
+Date:   Sun Feb 9 00:16:16 2020 +0100
+
+    Tableview started working.
+
+[33mcommit b77a34663ec54313f61b41add7ca69a03fce4c46[m
+Author: adamsalostowicz <adamsalostowicz@gmail.com>
+Date:   Wed Feb 5 22:32:02 2020 +0100
+
+    frontend2/1
+
+[33mcommit 4a821a1455e8edc43f390d6af43bc039244174c8[m
+Author: adamsalostowicz <adamsalostowicz@gmail.com>
+Date:   Sun Feb 2 22:15:38 2020 +0100
+
+    Commit pre-big-changes.
+
+[33mcommit 14ea71113075582d24f91f6787e31ba8ddc762de[m
+Author: adamsalostowicz <adamsalostowicz@gmail.com>
+Date:   Tue Jan 28 23:57:07 2020 +0100
+
+    I added new functionality in BikeAdd Window
+
+[33mcommit 8b7f18f3d2c0bde5a4f1ee414a88828c05b60f9e[m
+Author: adamsalostowicz <adamsalostowicz@gmail.com>
+Date:   Thu Jan 23 00:38:30 2020 +0100
+
+    Connection with Postgresql is working. I added config file --> conf.properties.
+
+[33mcommit 8e9206a86bba25b0056946c169fdd374b2d84a6c[m
+Author: adamsalostowicz <adamsalostowicz@gmail.com>
+Date:   Sun Jan 19 23:37:15 2020 +0100
+
+    New features of "Dodaj rower" Window.
+
+[33mcommit 5670d17cf0bff4911f4b789bbd0ffb2a28ef9984[m
+Author: adamsalostowicz <adamsalostowicz@gmail.com>
+Date:   Sun Jan 19 22:33:06 2020 +0100
+
+    I added new feature to windows --> closing other opened windows.
+
+[33mcommit 84877d66fe696a9b3b73280d1d0ae0a9f67c90dd[m[33m ([m[1;32mmaster[m[33m, [m[1;32mbackend[m[33m)[m
+Author: adamsalostowicz <adamsalostowicz@gmail.com>
+Date:   Sun Jan 19 12:52:15 2020 +0100
+
+    Second Commit
+
+[33mcommit 6be76e77e010567f8809764f1b9cbd045f4e6912[m
+Author: adamsalostowicz <adamsalostowicz@gmail.com>
+Date:   Sun Jan 19 12:42:13 2020 +0100
+
+    Start commit
