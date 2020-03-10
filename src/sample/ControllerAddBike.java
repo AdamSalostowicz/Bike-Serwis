@@ -14,6 +14,7 @@ import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.ResourceBundle;
 import static sample.Main.conn;
+import static sample.Controller.observableListBikes;
 
 public class ControllerAddBike implements Initializable {
 
@@ -33,8 +34,8 @@ public class ControllerAddBike implements Initializable {
     public String customerName;
     public String customerLastName;
     public String customerPhoneNumber;
-    public LocalDate dateAcceptance;
-    public LocalDate dateReleased;
+    public String dateAcceptance;
+    public String dateFixed;
 
     public Object service = null;
     public double sum = 0;
@@ -86,9 +87,9 @@ public class ControllerAddBike implements Initializable {
         }
     }
     @FXML
-    public void addBike(ActionEvent actionEvent) throws SQLException {
+    public void addBike(ActionEvent actionEvent) throws SQLException {  // Insert date into Database
         if (bikeName.getText().isEmpty() == false & firstName.getText().isEmpty() == false & lastName.getText().isEmpty() == false & phoneNumber.getText().isEmpty() == false & datePicker.getValue() != null & observableList.size() > 1) {
-            int key1 = 0, key2 = 0, key3 = 0, key4 = 0;
+            int key1 = 0, key2 = 0, key3 = 0, key4 = 0;  // Max Values of ID from tables - this is last insert data into table
             PreparedStatement preparedStatement = conn.prepareStatement("INSERT INTO bike VALUES (default , ?, ?)");
             preparedStatement.setString(1, bikeName.getText());
             preparedStatement.setString(2, description.getText());
@@ -113,6 +114,7 @@ public class ControllerAddBike implements Initializable {
             resultSet = stmt1.executeQuery("SELECT max(date_id) from date");
             while (resultSet.next()) {
                 key3 = resultSet.getInt(1);
+
             }
             preparedStatement = conn.prepareStatement("INSERT INTO orders VALUES (default, ?)");
             preparedStatement.setString(1, setOrderDetails());
@@ -121,13 +123,14 @@ public class ControllerAddBike implements Initializable {
             while (resultSet.next()){
                 key4 = resultSet.getInt(1);
             }
-            preparedStatement = conn.prepareStatement("INSERT INTO main VALUES (?, ?, ?, ?)");
+            preparedStatement = conn.prepareStatement("INSERT INTO main VALUES (?, ?, ?, ?)"); //  Insert data into table main
             preparedStatement.setInt(1, key2);
             preparedStatement.setInt(2, key1);
             preparedStatement.setInt(3, key3);
             preparedStatement.setInt(4, key4);
             preparedStatement.execute();
             System.out.println("Dodano");
+            observableListBikes.add(new TableBike(bikeName.getText(), String.valueOf(LocalDate.now()), String.valueOf(datePicker.getValue())));
             clearAllControllers();
         }else{
             System.out.println("NIe dodano");

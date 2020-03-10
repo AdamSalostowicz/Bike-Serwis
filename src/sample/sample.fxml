@@ -47,14 +47,16 @@
                             <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.00" />
                         </columnConstraints>
                         <rowConstraints>
-                            <RowConstraints percentHeight="12.5" />
-                            <RowConstraints percentHeight="12.5" />
-                            <RowConstraints percentHeight="12.5" />
-                            <RowConstraints percentHeight="12.5" />
-                            <RowConstraints percentHeight="12.5" />
-                            <RowConstraints percentHeight="12.5" />
-                            <RowConstraints percentHeight="12.5" />
-                            <RowConstraints percentHeight="12.5" />
+                            <RowConstraints percentHeight="10" />
+                            <RowConstraints percentHeight="10" />
+                            <RowConstraints percentHeight="10" />
+                            <RowConstraints percentHeight="10" />
+                            <RowConstraints percentHeight="10" />
+                            <RowConstraints percentHeight="10" />
+                            <RowConstraints percentHeight="10" />
+                            <RowConstraints percentHeight="10" />
+                            <RowConstraints percentHeight="10" />
+                            <RowConstraints percentHeight="10" />
                         </rowConstraints>
                         <GridPane fx:id="gridPane">
                             <fx:include source="calendarCell.fxml" />
@@ -153,14 +155,16 @@
                         <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.00" />
                     </columnConstraints>
                     <rowConstraints>
-                        <RowConstraints percentHeight="12.5" />
-                        <RowConstraints percentHeight="12.5" />
-                        <RowConstraints percentHeight="12.5" />
-                        <RowConstraints percentHeight="12.5" />
-                        <RowConstraints percentHeight="12.5" />
-                        <RowConstraints percentHeight="12.5" />
-                        <RowConstraints percentHeight="12.5" />
-                        <RowConstraints percentHeight="12.5" />
+                        <RowConstraints percentHeight="10" />
+                        <RowConstraints percentHeight="10" />
+                        <RowConstraints percentHeight="10" />
+                        <RowConstraints percentHeight="10" />
+                        <RowConstraints percentHeight="10" />
+                        <RowConstraints percentHeight="10" />
+                        <RowConstraints percentHeight="10" />
+                        <RowConstraints percentHeight="10" />
+                        <RowConstraints percentHeight="10" />
+                        <RowConstraints percentHeight="10" />
                     </rowConstraints>
                     <GridPane>
                         <fx:include source="calendarCell.fxml" />
@@ -259,14 +263,16 @@
                         <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.00" />
                     </columnConstraints>
                     <rowConstraints>
-                        <RowConstraints percentHeight="12.5" />
-                        <RowConstraints percentHeight="12.5" />
-                        <RowConstraints percentHeight="12.5" />
-                        <RowConstraints percentHeight="12.5" />
-                        <RowConstraints percentHeight="12.5" />
-                        <RowConstraints percentHeight="12.5" />
-                        <RowConstraints percentHeight="12.5" />
-                        <RowConstraints percentHeight="12.5" />
+                        <RowConstraints percentHeight="10" />
+                        <RowConstraints percentHeight="10" />
+                        <RowConstraints percentHeight="10" />
+                        <RowConstraints percentHeight="10" />
+                        <RowConstraints percentHeight="10" />
+                        <RowConstraints percentHeight="10" />
+                        <RowConstraints percentHeight="10" />
+                        <RowConstraints percentHeight="10" />
+                        <RowConstraints percentHeight="10" />
+                        <RowConstraints percentHeight="10" />
                     </rowConstraints>
                     <GridPane>
                         <fx:include source="calendarCell.fxml" />
@@ -365,14 +371,16 @@
                         <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.00" />
                     </columnConstraints>
                     <rowConstraints>
-                        <RowConstraints percentHeight="12.5" />
-                        <RowConstraints percentHeight="12.5" />
-                        <RowConstraints percentHeight="12.5" />
-                        <RowConstraints percentHeight="12.5" />
-                        <RowConstraints percentHeight="12.5" />
-                        <RowConstraints percentHeight="12.5" />
-                        <RowConstraints percentHeight="12.5" />
-                        <RowConstraints percentHeight="12.5" />
+                        <RowConstraints percentHeight="10" />
+                        <RowConstraints percentHeight="10" />
+                        <RowConstraints percentHeight="10" />
+                        <RowConstraints percentHeight="10" />
+                        <RowConstraints percentHeight="10" />
+                        <RowConstraints percentHeight="10" />
+                        <RowConstraints percentHeight="10" />
+                        <RowConstraints percentHeight="10" />
+                        <RowConstraints percentHeight="10" />
+                        <RowConstraints percentHeight="10" />
                     </rowConstraints>
                     <GridPane>
                         <fx:include source="calendarCell.fxml" />
@@ -471,14 +479,16 @@
                         <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.00" />
                     </columnConstraints>
                     <rowConstraints>
-                        <RowConstraints percentHeight="12.5" />
-                        <RowConstraints percentHeight="12.5" />
-                        <RowConstraints percentHeight="12.5" />
-                        <RowConstraints percentHeight="12.5" />
-                        <RowConstraints percentHeight="12.5" />
-                        <RowConstraints percentHeight="12.5" />
-                        <RowConstraints percentHeight="12.5" />
-                        <RowConstraints percentHeight="12.5" />
+                        <RowConstraints percentHeight="10" />
+                        <RowConstraints percentHeight="10" />
+                        <RowConstraints percentHeight="10" />
+                        <RowConstraints percentHeight="10" />
+                        <RowConstraints percentHeight="10" />
+                        <RowConstraints percentHeight="10" />
+                        <RowConstraints percentHeight="10" />
+                        <RowConstraints percentHeight="10" />
+                        <RowConstraints percentHeight="10" />
+                        <RowConstraints percentHeight="10" />
                     </rowConstraints>
                     <GridPane>
                         <fx:include source="calendarCell.fxml" />
@@ -577,10 +587,12 @@
                         <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.00" />
                     </columnConstraints>
                     <rowConstraints>
-                        <RowConstraints percentHeight="12.5" />
-                        <RowConstraints percentHeight="12.5" />
-                        <RowConstraints percentHeight="12.5" />
-                        <RowConstraints percentHeight="12.5" />
+                        <RowConstraints percentHeight="10" />
+                        <RowConstraints percentHeight="10" />
+                        <RowConstraints percentHeight="10" />
+                        <RowConstraints percentHeight="10" />
+                        <RowConstraints percentHeight="10" />
+                        <RowConstraints percentHeight="10" />
                     </rowConstraints>
                     <GridPane>
                         <fx:include source="calendarCell.fxml" />

@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import java.awt.*;
+import java.awt.TextField;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -71,7 +72,7 @@ public class Controller implements Initializable {
     private Stage stage2 = new Stage();
     private Stage stage3 = new Stage();
     private Stage stage4 = new Stage();
-    private ObservableList<TableBike> observableListBikes = FXCollections.observableArrayList();
+    static ObservableList<TableBike> observableListBikes = FXCollections.observableArrayList();
     public Statement stmt1 = null;
     public ResultSet resultSet = null;
 
@@ -120,7 +121,19 @@ public class Controller implements Initializable {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        showBikesInCurrentWeek();
     }
+    private void showBikesInCurrentWeek() {
+        int dateOfMonday = Integer.valueOf(label1.getText());
+        int dateOfSaturday = Integer.valueOf(label6.getText());
+        for (int i = 0; i < observableListBikes.size(); i++) {
+            int dateFixed = Integer.valueOf(observableListBikes.get(i).getDateFixed().substring(observableListBikes.get(i).getDateFixed().lastIndexOf('-') + 1));
+            if (dateFixed >= dateOfMonday && dateFixed <= dateOfSaturday){
+                
+            }
+        }
+    }
+
     @FXML
     private void setDifferentBackgrund() throws FileNotFoundException {
         String tapeta = null;
@@ -149,11 +162,11 @@ public class Controller implements Initializable {
             dateAcceptance = resultSet.getString(2);
             dateFixed = resultSet.getString(3);
             dateReleased = resultSet.getString(4);
-            System.out.println(bikeName + " " + dateAcceptance + " " + dateFixed + " +" + dateReleased + "+");
+//            System.out.println(bikeName + " " + dateAcceptance + " " + dateFixed + " +" + dateReleased + "+");
             if (dateReleased == null){
                 observableListBikes.add(new TableBike(bikeName, dateAcceptance, dateFixed));
                 System.out.println("pykło");
-                System.out.println(observableListBikes.get(observableListBikes.size() - 1).getBikeName());
+//                System.out.println(observableListBikes.get(observableListBikes.size() - 1).getBikeName());
             }
             dateReleased = "";
         }

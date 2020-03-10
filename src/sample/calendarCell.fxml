@@ -13,32 +13,32 @@
     <rowConstraints>
         <RowConstraints vgrow="ALWAYS" />
     </rowConstraints>
-    <Label fx:id="labelInCell" alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" textFill="aquamarine" GridPane.columnIndex="0" GridPane.valignment="CENTER">
-        <font>
-            <Font size="35.0" />
-        </font>
-    </Label>
-    <TabPane stylesheets="@tabPane.css" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
-        <Tab style="-fx-background-color: transparent; -fx-border-color: aquamarine; " text="rower1">
-            <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">
-                <font>
-                    <Font size="15.0" />
-                </font>
-            </Label>
-        </Tab>
-        <Tab style="-fx-background-color: transparent; -fx-border-color: aquamarine" text="rower2">
-            <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                <font>
-                    <Font size="15.0" />
-                </font>
-            </Label>
-        </Tab>
-        <Tab style="-fx-background-color: transparent; -fx-border-color: aquamarine" text="rower3">
-            <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">
-                <font>
-                    <Font size="15.0" />
-                </font>
-            </Label>
-        </Tab>
-    </TabPane>
+<!--    <Label fx:id="labelInCell" alignment="CENTER" prefHeight="NaN" prefWidth="Infinity" textFill="aquamarine" GridPane.columnIndex="0" GridPane.valignment="CENTER">-->
+<!--        <font>-->
+<!--            <Font size="35.0" />-->
+<!--        </font>-->
+<!--    </Label>-->
+<!--    <TabPane stylesheets="@tabPane.css" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">-->
+<!--        <Tab style="-fx-background-color: transparent; -fx-border-color: aquamarine; " text="rower1">-->
+<!--            <Label prefWidth="Infinity" text="cosik napisane" textAlignment="CENTER" textFill="whitesmoke">-->
+<!--                <font>-->
+<!--                    <Font size="15.0" />-->
+<!--                </font>-->
+<!--            </Label>-->
+<!--        </Tab>-->
+<!--        <Tab style="-fx-background-color: transparent; -fx-border-color: aquamarine" text="rower2">-->
+<!--            <Label prefWidth="Infinity" text="cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">-->
+<!--                <font>-->
+<!--                    <Font size="15.0" />-->
+<!--                </font>-->
+<!--            </Label>-->
+<!--        </Tab>-->
+<!--        <Tab style="-fx-background-color: transparent; -fx-border-color: aquamarine" text="rower3">-->
+<!--            <Label prefWidth="Infinity" text="jesce cosik wincyj napisane" textAlignment="CENTER" textFill="whitesmoke">-->
+<!--                <font>-->
+<!--                    <Font size="15.0" />-->
+<!--                </font>-->
+<!--            </Label>-->
+<!--        </Tab>-->
+<!--    </TabPane>-->
 </GridPane>
