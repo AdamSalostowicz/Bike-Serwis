@@ -21,6 +21,7 @@ public class Main extends Application {
     static Connection conn = null;
     static int number = 1;
     static Dimension screenSize;
+    static Region root;
     @Override
     public void init() throws IOException {
 
@@ -42,7 +43,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Region root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("Twój magazyn");
         screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         width = screenSize.getWidth();

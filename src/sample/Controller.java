@@ -5,8 +5,17 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
+import javafx.scene.layout.*;
+import javafx.stage.Stage;
+
 import java.awt.*;
-import java.awt.TextField;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -17,14 +26,7 @@ import java.sql.Statement;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.*;
-import javafx.scene.control.Label;
-import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.image.Image;
-import javafx.scene.layout.*;
-import javafx.stage.Stage;
+
 import static sample.Main.conn;
 public class Controller implements Initializable {
 
@@ -53,7 +55,7 @@ public class Controller implements Initializable {
     @FXML
     private Label month6;
     @FXML
-    static GridPane gridPane;
+    private GridPane fullGrid;
     @FXML
     private TableView<TableBike> tableRoweryNaStanie;
     @FXML
@@ -66,6 +68,7 @@ public class Controller implements Initializable {
     private TabPane tabPane;
     @FXML
     private GridPane mainGrid;
+
     private int week = 0;
     private String[] polishMonths = {"styczeń", "luty", "marzec", "kwiecień", "maj", "czerwiec", "lipiec", "sierpień", "wrzesień", "październik", "listopad", "grudzień"};
     private Stage stage1 = new Stage();
@@ -75,6 +78,9 @@ public class Controller implements Initializable {
     static ObservableList<TableBike> observableListBikes = FXCollections.observableArrayList();
     public Statement stmt1 = null;
     public ResultSet resultSet = null;
+    public VBox vBox;
+    private Button rower;
+    private ObservableList<VBox> rowery = FXCollections.observableArrayList();
 
     @FXML
     private void addBike() throws IOException {
@@ -124,12 +130,24 @@ public class Controller implements Initializable {
         showBikesInCurrentWeek();
     }
     private void showBikesInCurrentWeek() {
+        clearGridPane();
         int dateOfMonday = Integer.valueOf(label1.getText());
+        System.out.println(dateOfMonday);
         int dateOfSaturday = Integer.valueOf(label6.getText());
+        System.out.println(dateOfSaturday);
         for (int i = 0; i < observableListBikes.size(); i++) {
             int dateFixed = Integer.valueOf(observableListBikes.get(i).getDateFixed().substring(observableListBikes.get(i).getDateFixed().lastIndexOf('-') + 1));
+            System.out.println(dateFixed);
             if (dateFixed >= dateOfMonday && dateFixed <= dateOfSaturday){
-                
+                int year = Integer.parseInt(observableListBikes.get(i).getDateFixed().substring(0, observableListBikes.get(i).getDateFixed().indexOf('-')));
+                System.out.println(observableListBikes.get(i).getDateFixed());
+                int month = Integer.parseInt(observableListBikes.get(i).getDateFixed().substring(observableListBikes.get(i).getDateFixed().indexOf('-') + 1, observableListBikes.get(i).getDateFixed().lastIndexOf('-')));
+                int ColumnsNumber = LocalDate.of(year, month, dateFixed).getDayOfWeek().getValue() - 1;
+                vBox = new VBox();
+                fullGrid.add(vBox, ColumnsNumber,1);
+                rower = new Button(observableListBikes.get(i).getBikeName());
+                vBox.getChildren().add(rower);
+                rowery.add(vBox);
             }
         }
     }
@@ -211,6 +229,8 @@ public class Controller implements Initializable {
         month5.setText(polishMonths[LocalDate.from(DayOfWeek.FRIDAY.adjustInto(LocalDate.now().plusWeeks(week))).getMonthValue() - 1]);
         label6.setText(String.valueOf(LocalDate.from(DayOfWeek.SATURDAY.adjustInto(LocalDate.now().plusWeeks(week))).getDayOfMonth()));
         month6.setText(polishMonths[LocalDate.from(DayOfWeek.SATURDAY.adjustInto(LocalDate.now().plusWeeks(week))).getMonthValue() - 1]);
+        vBox.getChildren().clear();
+        showBikesInCurrentWeek();
     }
 
     @FXML
@@ -228,11 +248,17 @@ public class Controller implements Initializable {
         month5.setText(polishMonths[LocalDate.from(DayOfWeek.FRIDAY.adjustInto(LocalDate.now().plusWeeks(week))).getMonthValue() - 1]);
         label6.setText(String.valueOf(LocalDate.from(DayOfWeek.SATURDAY.adjustInto(LocalDate.now().minusWeeks(Math.abs(week)))).getDayOfMonth()));
         month6.setText(polishMonths[LocalDate.from(DayOfWeek.SATURDAY.adjustInto(LocalDate.now().plusWeeks(week))).getMonthValue() - 1]);
+        showBikesInCurrentWeek();
     }
     private void closeOtherWindwos(){
         stage1.close();
         stage2.close();
         stage3.close();
         stage4.close();
+    }
+    private void clearGridPane(){   // This feature removes unmatched items from the week displayed.
+        for (int i = 0; i < rowery.size(); i++) {
+            fullGrid.getChildren().remove(rowery.get(i));
+        }
     }
 }
