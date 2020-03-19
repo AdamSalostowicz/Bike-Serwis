@@ -5,6 +5,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -25,6 +26,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
+import java.time.chrono.ChronoLocalDate;
 import java.util.ResourceBundle;
 
 import static sample.Main.conn;
@@ -80,7 +82,7 @@ public class Controller implements Initializable {
     public ResultSet resultSet = null;
     public VBox vBox;
     private Button rower;
-    private ObservableList<VBox> rowery = FXCollections.observableArrayList();
+    private ObservableList<Node> rowery = FXCollections.observableArrayList();
 
     @FXML
     private void addBike() throws IOException {
@@ -131,23 +133,20 @@ public class Controller implements Initializable {
     }
     private void showBikesInCurrentWeek() {
         clearGridPane();
-        int dateOfMonday = Integer.valueOf(label1.getText());
-        System.out.println(dateOfMonday);
-        int dateOfSaturday = Integer.valueOf(label6.getText());
-        System.out.println(dateOfSaturday);
         for (int i = 0; i < observableListBikes.size(); i++) {
             int dateFixed = Integer.valueOf(observableListBikes.get(i).getDateFixed().substring(observableListBikes.get(i).getDateFixed().lastIndexOf('-') + 1));
-            System.out.println(dateFixed);
-            if (dateFixed >= dateOfMonday && dateFixed <= dateOfSaturday){
-                int year = Integer.parseInt(observableListBikes.get(i).getDateFixed().substring(0, observableListBikes.get(i).getDateFixed().indexOf('-')));
-                System.out.println(observableListBikes.get(i).getDateFixed());
-                int month = Integer.parseInt(observableListBikes.get(i).getDateFixed().substring(observableListBikes.get(i).getDateFixed().indexOf('-') + 1, observableListBikes.get(i).getDateFixed().lastIndexOf('-')));
-                int ColumnsNumber = LocalDate.of(year, month, dateFixed).getDayOfWeek().getValue() - 1;
-                vBox = new VBox();
-                fullGrid.add(vBox, ColumnsNumber,1);
+            int year = Integer.parseInt(observableListBikes.get(i).getDateFixed().substring(0, observableListBikes.get(i).getDateFixed().indexOf('-')));
+            int month = Integer.parseInt(observableListBikes.get(i).getDateFixed().substring(observableListBikes.get(i).getDateFixed().indexOf('-') + 1, observableListBikes.get(i).getDateFixed().lastIndexOf('-')));
+            if (LocalDate.of(year, month, dateFixed).isAfter(ChronoLocalDate.from(DayOfWeek.SUNDAY.adjustInto(LocalDate.now().plusWeeks(week - 1)))) &&
+                LocalDate.of(year, month, dateFixed).isBefore(ChronoLocalDate.from(DayOfWeek.SUNDAY.adjustInto(LocalDate.now().plusWeeks(week))))){
+                int columnsNumber = LocalDate.of(year, month, dateFixed).getDayOfWeek().getValue() - 1;
+                int rowNumber = 1;
+//                vBox = new VBox();
+//                System.out.println(fullGrid.getRowIndex(rower) + " " + fullGrid.getColumnIndex(rower));
                 rower = new Button(observableListBikes.get(i).getBikeName());
-                vBox.getChildren().add(rower);
-                rowery.add(vBox);
+                fullGrid.add(rower, columnsNumber,rowNumber);
+//                vBox.getChildren().add(rower);
+                rowery.add(rower);
             }
         }
     }
@@ -229,24 +228,24 @@ public class Controller implements Initializable {
         month5.setText(polishMonths[LocalDate.from(DayOfWeek.FRIDAY.adjustInto(LocalDate.now().plusWeeks(week))).getMonthValue() - 1]);
         label6.setText(String.valueOf(LocalDate.from(DayOfWeek.SATURDAY.adjustInto(LocalDate.now().plusWeeks(week))).getDayOfMonth()));
         month6.setText(polishMonths[LocalDate.from(DayOfWeek.SATURDAY.adjustInto(LocalDate.now().plusWeeks(week))).getMonthValue() - 1]);
-        vBox.getChildren().clear();
+//        vBox.getChildren().clear();
         showBikesInCurrentWeek();
     }
 
     @FXML
     private void showBackWeekEvent(){
         week--;
-        label1.setText(String.valueOf(LocalDate.from(DayOfWeek.MONDAY.adjustInto(LocalDate.now().minusWeeks(Math.abs(week)))).getDayOfMonth()));
+        label1.setText(String.valueOf(LocalDate.from(DayOfWeek.MONDAY.adjustInto(LocalDate.now().plusWeeks(week))).getDayOfMonth()));
         month1.setText(polishMonths[LocalDate.from(DayOfWeek.MONDAY.adjustInto(LocalDate.now().plusWeeks(week))).getMonthValue() - 1]);
-        label2.setText(String.valueOf(LocalDate.from(DayOfWeek.TUESDAY.adjustInto(LocalDate.now().minusWeeks(Math.abs(week)))).getDayOfMonth()));
+        label2.setText(String.valueOf(LocalDate.from(DayOfWeek.TUESDAY.adjustInto(LocalDate.now().plusWeeks(week))).getDayOfMonth()));
         month2.setText(polishMonths[LocalDate.from(DayOfWeek.TUESDAY.adjustInto(LocalDate.now().plusWeeks(week))).getMonthValue() - 1]);
-        label3.setText(String.valueOf(LocalDate.from(DayOfWeek.WEDNESDAY.adjustInto(LocalDate.now().minusWeeks(Math.abs(week)))).getDayOfMonth()));
+        label3.setText(String.valueOf(LocalDate.from(DayOfWeek.WEDNESDAY.adjustInto(LocalDate.now().plusWeeks(week))).getDayOfMonth()));
         month3.setText(polishMonths[LocalDate.from(DayOfWeek.WEDNESDAY.adjustInto(LocalDate.now().plusWeeks(week))).getMonthValue() - 1]);
-        label4.setText(String.valueOf(LocalDate.from(DayOfWeek.THURSDAY.adjustInto(LocalDate.now().minusWeeks(Math.abs(week)))).getDayOfMonth()));
+        label4.setText(String.valueOf(LocalDate.from(DayOfWeek.THURSDAY.adjustInto(LocalDate.now().plusWeeks(week))).getDayOfMonth()));
         month4.setText(polishMonths[LocalDate.from(DayOfWeek.THURSDAY.adjustInto(LocalDate.now().plusWeeks(week))).getMonthValue() - 1]);
-        label5.setText(String.valueOf(LocalDate.from(DayOfWeek.FRIDAY.adjustInto(LocalDate.now().minusWeeks(Math.abs(week)))).getDayOfMonth()));
+        label5.setText(String.valueOf(LocalDate.from(DayOfWeek.FRIDAY.adjustInto(LocalDate.now().plusWeeks(week))).getDayOfMonth()));
         month5.setText(polishMonths[LocalDate.from(DayOfWeek.FRIDAY.adjustInto(LocalDate.now().plusWeeks(week))).getMonthValue() - 1]);
-        label6.setText(String.valueOf(LocalDate.from(DayOfWeek.SATURDAY.adjustInto(LocalDate.now().minusWeeks(Math.abs(week)))).getDayOfMonth()));
+        label6.setText(String.valueOf(LocalDate.from(DayOfWeek.SATURDAY.adjustInto(LocalDate.now().plusWeeks(week))).getDayOfMonth()));
         month6.setText(polishMonths[LocalDate.from(DayOfWeek.SATURDAY.adjustInto(LocalDate.now().plusWeeks(week))).getMonthValue() - 1]);
         showBikesInCurrentWeek();
     }

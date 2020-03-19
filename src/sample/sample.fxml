@@ -136,7 +136,7 @@
                         </Label>
                         <Label fx:id="month6" layoutX="38.0" layoutY="66.0" prefHeight="31.0" prefWidth="95.0" textAlignment="CENTER" textFill="WHITE">
                             <font>
-                                <Font size="19.0" />
+                                <Font size="24.0" />
                             </font>
                         </Label>
                         <Label fx:id="day6" layoutX="20.0" layoutY="14.0" prefHeight="39.0" prefWidth="62.0" text="Sob" textFill="WHITE">
