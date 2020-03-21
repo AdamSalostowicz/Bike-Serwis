@@ -145,6 +145,7 @@ public class Controller implements Initializable {
 //                System.out.println(fullGrid.getRowIndex(rower) + " " + fullGrid.getColumnIndex(rower));
                 rower = new Button(observableListBikes.get(i).getBikeName());
                 fullGrid.add(rower, columnsNumber,rowNumber);
+                rower.autosize();;
 //                vBox.getChildren().add(rower);
                 rowery.add(rower);
             }
