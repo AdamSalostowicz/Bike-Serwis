@@ -5,12 +5,14 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.*;
+import javafx.scene.control.TabPane;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.layout.*;
@@ -21,6 +23,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -81,7 +84,7 @@ public class Controller implements Initializable {
     public Statement stmt1 = null;
     public ResultSet resultSet = null;
     public VBox vBox;
-    private Button rower;
+    private Label rower;
     private ObservableList<Node> rowery = FXCollections.observableArrayList();
 
     @FXML
@@ -129,25 +132,58 @@ public class Controller implements Initializable {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        showBikesInCurrentWeek();
+        try {
+            showBikesInCurrentWeek();
+        } catch (IOException | SQLException e) {
+            e.printStackTrace();
+        }
     }
-    private void showBikesInCurrentWeek() {
+    private void showBikesInCurrentWeek() throws IOException, SQLException {
         clearGridPane();
+        byte[][] position = new byte[6][10];
+        for (int i = 0; i < 6; i++) {
+            for (int j = 0; j < 10; j++) {
+                position[i][j] = 0;
+            }
+        }
+
         for (int i = 0; i < observableListBikes.size(); i++) {
             int dateFixed = Integer.valueOf(observableListBikes.get(i).getDateFixed().substring(observableListBikes.get(i).getDateFixed().lastIndexOf('-') + 1));
             int year = Integer.parseInt(observableListBikes.get(i).getDateFixed().substring(0, observableListBikes.get(i).getDateFixed().indexOf('-')));
             int month = Integer.parseInt(observableListBikes.get(i).getDateFixed().substring(observableListBikes.get(i).getDateFixed().indexOf('-') + 1, observableListBikes.get(i).getDateFixed().lastIndexOf('-')));
             if (LocalDate.of(year, month, dateFixed).isAfter(ChronoLocalDate.from(DayOfWeek.SUNDAY.adjustInto(LocalDate.now().plusWeeks(week - 1)))) &&
-                LocalDate.of(year, month, dateFixed).isBefore(ChronoLocalDate.from(DayOfWeek.SUNDAY.adjustInto(LocalDate.now().plusWeeks(week))))){
+                    LocalDate.of(year, month, dateFixed).isBefore(ChronoLocalDate.from(DayOfWeek.SUNDAY.adjustInto(LocalDate.now().plusWeeks(week))))) {
                 int columnsNumber = LocalDate.of(year, month, dateFixed).getDayOfWeek().getValue() - 1;
                 int rowNumber = 1;
-//                vBox = new VBox();
-//                System.out.println(fullGrid.getRowIndex(rower) + " " + fullGrid.getColumnIndex(rower));
-                rower = new Button(observableListBikes.get(i).getBikeName());
-                fullGrid.add(rower, columnsNumber,rowNumber);
-                rower.autosize();;
-//                vBox.getChildren().add(rower);
-                rowery.add(rower);
+                if (position[rowNumber - 1][columnsNumber] == 0) {
+                    position[rowNumber - 1][columnsNumber] = 1;
+                } else {
+                    while (position[rowNumber - 1][columnsNumber] == 1) {
+                        rowNumber++;
+                    }
+                    position[rowNumber - 1][columnsNumber] = 1;
+                }
+                vBox = new VBox(2);
+                vBox.setAlignment(Pos.TOP_CENTER);
+                vBox.setStyle("-fx-border-radius: 5%;-fx-border-insets: 3;-fx-border-color: aliceblue; -fx-border-width: 2");
+                rower = new Label(observableListBikes.get(i).getBikeName());
+                rower.setStyle("-fx-text-fill: white; -fx-font-size: 18");
+                PreparedStatement preparedStatement = conn.prepareStatement("select customer_phonenumber from customer inner join main on customer_id=customer_id_fkey inner join bike on bike_id=bike_id_fkey where bike_name=?");
+                System.out.println(observableListBikes.get(i).getBikeName());
+                preparedStatement.setString(1,observableListBikes.get(i).getBikeName());
+                preparedStatement.execute();
+                resultSet = preparedStatement.getResultSet();
+                String numberOfPhone = null;
+                while (resultSet.next()){
+                    numberOfPhone = resultSet.getString(1);
+                }
+                Label phone = new Label(numberOfPhone);
+                phone.setStyle("-fx-text-fill: white; -fx-font-size: 16");
+                Label service = new Label("Bomba poszła");
+                service.setStyle("-fx-text-fill: white; -fx-font-size: 14");
+                vBox.getChildren().addAll(rower, phone, service);
+                fullGrid.add(vBox, columnsNumber, rowNumber);
+                rowery.add(vBox);
             }
         }
     }
@@ -183,7 +219,6 @@ public class Controller implements Initializable {
 //            System.out.println(bikeName + " " + dateAcceptance + " " + dateFixed + " +" + dateReleased + "+");
             if (dateReleased == null){
                 observableListBikes.add(new TableBike(bikeName, dateAcceptance, dateFixed));
-                System.out.println("pykło");
 //                System.out.println(observableListBikes.get(observableListBikes.size() - 1).getBikeName());
             }
             dateReleased = "";
@@ -215,7 +250,7 @@ public class Controller implements Initializable {
         label6.setText(String.valueOf(LocalDate.from(DayOfWeek.SATURDAY.adjustInto(LocalDate.now())).getDayOfMonth()));
     }
     @FXML
-    private void showNextWeekEvent(){
+    private void showNextWeekEvent() throws IOException, SQLException {
         week++;
         label1.setText(String.valueOf(LocalDate.from(DayOfWeek.MONDAY.adjustInto(LocalDate.now().plusWeeks(week))).getDayOfMonth()));
         month1.setText(polishMonths[LocalDate.from(DayOfWeek.MONDAY.adjustInto(LocalDate.now().plusWeeks(week))).getMonthValue() - 1]);
@@ -229,12 +264,11 @@ public class Controller implements Initializable {
         month5.setText(polishMonths[LocalDate.from(DayOfWeek.FRIDAY.adjustInto(LocalDate.now().plusWeeks(week))).getMonthValue() - 1]);
         label6.setText(String.valueOf(LocalDate.from(DayOfWeek.SATURDAY.adjustInto(LocalDate.now().plusWeeks(week))).getDayOfMonth()));
         month6.setText(polishMonths[LocalDate.from(DayOfWeek.SATURDAY.adjustInto(LocalDate.now().plusWeeks(week))).getMonthValue() - 1]);
-//        vBox.getChildren().clear();
         showBikesInCurrentWeek();
     }
 
     @FXML
-    private void showBackWeekEvent(){
+    private void showBackWeekEvent() throws IOException, SQLException {
         week--;
         label1.setText(String.valueOf(LocalDate.from(DayOfWeek.MONDAY.adjustInto(LocalDate.now().plusWeeks(week))).getDayOfMonth()));
         month1.setText(polishMonths[LocalDate.from(DayOfWeek.MONDAY.adjustInto(LocalDate.now().plusWeeks(week))).getMonthValue() - 1]);
