@@ -86,7 +86,6 @@ public class Controller implements Initializable {
     public VBox vBox;
     private Label rower;
     private ObservableList<Node> rowery = FXCollections.observableArrayList();
-
     @FXML
     private void addBike() throws IOException {
         closeOtherWindwos();
@@ -146,7 +145,6 @@ public class Controller implements Initializable {
                 position[i][j] = 0;
             }
         }
-
         for (int i = 0; i < observableListBikes.size(); i++) {
             int dateFixed = Integer.valueOf(observableListBikes.get(i).getDateFixed().substring(observableListBikes.get(i).getDateFixed().lastIndexOf('-') + 1));
             int year = Integer.parseInt(observableListBikes.get(i).getDateFixed().substring(0, observableListBikes.get(i).getDateFixed().indexOf('-')));
@@ -177,11 +175,34 @@ public class Controller implements Initializable {
                 while (resultSet.next()){
                     numberOfPhone = resultSet.getString(1);
                 }
+                preparedStatement = conn.prepareStatement("select orders_items from orders inner join main on orders_id=orders_id_fkey inner join bike on bike_id=bike_id_fkey where bike_name=?");
+                preparedStatement.setString(1,observableListBikes.get(i).getBikeName());
+                preparedStatement.execute();
+                resultSet = preparedStatement.getResultSet();
+                String orderPositions = null;
+                while (resultSet.next()){
+                    orderPositions = resultSet.getString(1);
+                }
+                Label order = new Label();
+                for (int j = 0; j < orderPositions.length(); j++) {
+                    if (orderPositions.charAt(j) == '1'){
+                        preparedStatement = conn.prepareStatement("select service_name from service where service_id=?");
+                        preparedStatement.setInt(1, j);
+                        preparedStatement.execute();
+                        resultSet = preparedStatement.getResultSet();
+                        String text = "";
+                        while (resultSet.next()){
+                            text = resultSet.getString(1);
+                            order.setText(text);
+                        }
+                    }
+                }
+                order.setStyle("-fx-text-fill: white;-fx-font-size: 14");
                 Label phone = new Label(numberOfPhone);
                 phone.setStyle("-fx-text-fill: white; -fx-font-size: 16");
                 Label service = new Label("Bomba poszła");
                 service.setStyle("-fx-text-fill: white; -fx-font-size: 14");
-                vBox.getChildren().addAll(rower, phone, service);
+                vBox.getChildren().addAll(rower, phone, order);
                 fullGrid.add(vBox, columnsNumber, rowNumber);
                 rowery.add(vBox);
             }

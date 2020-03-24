@@ -39,7 +39,7 @@ public class ControllerAddBike implements Initializable {
 
     public Object service = null;
     public double sum = 0;
-    ObservableList<Serwis> observableList = FXCollections.observableArrayList();;
+    static ObservableList<Serwis> observableList = FXCollections.observableArrayList();;
     public Statement stmt1 = null;
     public ResultSet resultSet = null;
     @Override
