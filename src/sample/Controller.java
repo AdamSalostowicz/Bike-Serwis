@@ -187,7 +187,7 @@ public class Controller implements Initializable {
                 for (int j = 0; j < orderPositions.length(); j++) {
                     if (orderPositions.charAt(j) == '1'){
                         preparedStatement = conn.prepareStatement("select service_name from service where service_id=?");
-                        preparedStatement.setInt(1, j);
+                        preparedStatement.setInt(1, j + 1);
                         preparedStatement.execute();
                         resultSet = preparedStatement.getResultSet();
                         String text = "";
@@ -197,7 +197,7 @@ public class Controller implements Initializable {
                         }
                     }
                 }
-                order.setStyle("-fx-text-fill: white;-fx-font-size: 14");
+                order.setStyle("-fx-text-fill: white;-fx-font-size: 16");
                 Label phone = new Label(numberOfPhone);
                 phone.setStyle("-fx-text-fill: white; -fx-font-size: 16");
                 Label service = new Label("Bomba poszła");
