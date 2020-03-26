@@ -105,16 +105,6 @@ public class Controller implements Initializable {
     }
 
     @FXML
-    private void  archive() throws IOException {
-        closeOtherWindwos();
-        Parent root = FXMLLoader.load(getClass().getResource("archive.fxml"));
-        stage3.setTitle("Archiwum");
-        stage3.setScene(new Scene(root, 400, 400));
-        stage3.show();
-    }
-
-
-    @FXML
     private void  reservation() throws IOException {
         closeOtherWindwos();
         Parent root = FXMLLoader.load(getClass().getResource("archive.fxml"));

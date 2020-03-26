@@ -148,7 +148,7 @@
                 </SplitPane>
             </GridPane>
         </Tab>
-        <Tab fx:id="tab2" onSelectionChanged="#setDifferentBackgrund" text="Wolne terminy">
+        <Tab fx:id="tab2" onSelectionChanged="#setDifferentBackgrund" text="Archiwum">
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
         </Tab>
         <Tab fx:id="tab3" onSelectionChanged="#setDifferentBackgrund" text="Rowery na stanie">
@@ -183,11 +183,6 @@
             </font>
         </Button>
         <Button maxWidth="120.0" minWidth="100" mnemonicParsing="false" onAction="#backBike" style="-fx-background-color: transparent; -fx-border-color: whitesmoke" text="Zwróć rower" textFill="WHITE">
-            <font>
-                <Font size="15.0" />
-            </font>
-        </Button>
-        <Button maxWidth="120.0" minWidth="100" mnemonicParsing="false" onAction="#archive" style="-fx-background-color: transparent; -fx-border-color: whitesmoke; " text="Archiwum" textFill="#fcfafa">
             <font>
                 <Font size="15.0" />
             </font>
