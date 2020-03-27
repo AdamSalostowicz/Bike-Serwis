@@ -2,6 +2,7 @@ package sample;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -15,6 +16,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
 
@@ -126,6 +128,7 @@ public class Controller implements Initializable {
         } catch (IOException | SQLException e) {
             e.printStackTrace();
         }
+        changeColorOfBorder();
     }
     private void showBikesInCurrentWeek() throws IOException, SQLException {
         clearGridPane();
@@ -197,6 +200,15 @@ public class Controller implements Initializable {
                 rowery.add(vBox);
             }
         }
+    }
+
+    private void changeColorOfBorder(){
+        vBox.setOnMouseClicked((new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                vBox.setStyle("--fx-border-radius: 5%;-fx-border-insets: 3;-fx-border-color: aquamarine; -fx-border-width: 2");
+            }
+        }));
     }
 
     @FXML
